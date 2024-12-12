@@ -311,6 +311,7 @@ span.dot {
   height: 50px;
   background-color: #b8860b;
   top: -55px;
+  transform: translateX(-50%);
 }
 .aminity-slider .owl-nav {
   display: flex !important;

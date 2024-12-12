@@ -245,3 +245,60 @@ function add_meta_custom_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'add_meta_custom_body_class');
+
+
+
+/**
+ * Register a custom post type called "Properties".
+ *
+ * @see get_post_type_labels() for label keys.
+ */
+function hive_property_init() {
+	$labels = array(
+		'name'                  => _x( 'Properties', 'Post type general name', 'hive-estates' ),
+		'singular_name'         => _x( 'Property', 'Post type singular name', 'hive-estates' ),
+		'menu_name'             => _x( 'Property', 'Admin Menu text', 'hive-estates' ),
+		'name_admin_bar'        => _x( 'Property', 'Add New on Toolbar', 'hive-estates' ),
+		'add_new'               => __( 'Add New', 'hive-estates' ),
+		'add_new_item'          => __( 'Add New Property', 'hive-estates' ),
+		'new_item'              => __( 'New Property', 'hive-estates' ),
+		'edit_item'             => __( 'Edit Property', 'hive-estates' ),
+		'view_item'             => __( 'View Property', 'hive-estates' ),
+		'all_items'             => __( 'All Propertys', 'hive-estates' ),
+		'search_items'          => __( 'Search Propertys', 'hive-estates' ),
+		'parent_item_colon'     => __( 'Parent Propertys:', 'hive-estates' ),
+		'not_found'             => __( 'No Propertys found.', 'hive-estates' ),
+		'not_found_in_trash'    => __( 'No Propertys found in Trash.', 'hive-estates' ),
+		'featured_image'        => _x( 'Property Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'hive-estates' ),
+		// 'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
+		// 'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
+		// 'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
+		// 'archives'              => _x( 'Property archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'hive-estates' ),
+		// 'insert_into_item'      => _x( 'Insert into Property', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'hive-estates' ),
+		// 'uploaded_to_this_item' => _x( 'Uploaded to this Property', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'hive-estates' ),
+		// 'filter_items_list'     => _x( 'Filter Propertys list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'hive-estates' ),
+		// 'items_list_navigation' => _x( 'Propertys list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'hive-estates' ),
+		// 'items_list'            => _x( 'Propertys list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'hive-estates' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'property' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'menu_icon'			 => 'dashicons-building	',
+		'taxonomies'		 => array('category', 'post_tag'),
+	);
+
+	register_post_type( 'properties', $args );
+}
+
+add_action( 'init', 'hive_property_init' );

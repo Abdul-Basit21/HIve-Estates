@@ -127,7 +127,7 @@ class Aminity_Slider_Widget extends \Elementor\Widget_Base
                 ?>
                     <div class="item" style="background-image: url(<?php echo $slider['slider_BG_Image']['url']; ?>);">
                         <img class="aminity-icon" src="<?php echo $slider['slider_icon']['url']; ?>" alt="">
-                        <h2>Swipe</h2>
+                        <h2><?php echo $slider['slider_title']; ?></h2>
                     </div>
                 <?php
                 }

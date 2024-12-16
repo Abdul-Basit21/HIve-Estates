@@ -247,11 +247,15 @@ final class HiveEstates_Addon_Extension {
 
 		require_once( __DIR__ . '/widgets/aminity-slider.php' );
 		require_once( __DIR__ . '/widgets/property-list-sale.php' );
+		require_once( __DIR__ . '/widgets/country-list.php' );
+		require_once( __DIR__ . '/widgets/post-list.php' );
 
 		// added by EWA - EWA own Register widgets, loading all widget names
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Aminity_Slider_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Property_List_Sale() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Country_List_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Post_List() );
 
 	}
 

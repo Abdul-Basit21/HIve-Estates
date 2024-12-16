@@ -53,7 +53,7 @@ class Property_List_Sale extends \Elementor\Widget_Base
                 'label' => esc_html__('Select Tags', 'hiveestates-addon'),
                 'type' => \Elementor\Controls_Manager::SELECT2,
                 'label_block' => true,
-                'multiple' => true,
+                'multiple' => false,
                 'options' => $tag_options,
             ]
         );
@@ -115,7 +115,7 @@ class Property_List_Sale extends \Elementor\Widget_Base
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?> -->
-                            <div class="property-img-wrapper">
+                            <div class="property-img-wrapper hover-img-efftect">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php echo $property_img; ?>
                                 </a>

@@ -1,3 +1,6 @@
+.post,.page{
+  margin: 0;
+}
 .container-fluid.header-main {
   padding: 12px 0;
   position: relative;
@@ -607,6 +610,52 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   color: #333;
   letter-spacing: 1px;
 }
+.site-footer .newsletter-wrapper .newsletter-wrapper > p {
+  display: flex;
+  position: relative;
+  margin: 0;
+}
+.site-footer .newsletter-wrapper .newsletter-wrapper > p span.wpcf7-form-control-wrap{
+  width: 100%;
+}
+.site-footer .newsletter-wrapper .newsletter-wrapper > p input[type="email"]{
+  height: 55px;
+  padding: 16px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.wpcf7-spinner{
+  position: absolute;
+  right: -40px;
+  top: 10px;
+}
+.site-footer .newsletter-wrapper .newsletter-wrapper > p input[type="submit"]{
+  display: none;
+}
+.site-footer .newsletter-wrapper .newsletter-wrapper > p label[for="submit"]{
+  position: absolute;
+  right: 5px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #b8860b;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.site-footer .newsletter-wrapper .newsletter-wrapper > p label[for="submit"]:after{
+  content: "\f548";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: remixicon;
+  color: #fff;
+  font-size: 30px;
+}
 .site-footer .footer-main{
   padding: 100px 0 150px 0;
   background-color: #1C1C1E;
@@ -644,4 +693,11 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   font-family: 'Quicksand';
   font-weight: 500;
   letter-spacing: 0.7px;
+}
+.footer-copyright{
+  background-color: #000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }

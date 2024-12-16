@@ -255,6 +255,10 @@ function add_meta_custom_body_class($classes)
 }
 add_filter('body_class', 'add_meta_custom_body_class');
 
+define( 'WPCF7_AUTOP', false );
+
+add_filter( 'widget_text', 'do_shortcode' );
+
 
 
 /**

@@ -36,16 +36,23 @@
 							<p class="footer-para">
 								<?= get_field('footer_para', 'option'); ?>
 							</p>
-							<div class="footer-social-links">
-								<?php
+							<?php
+							if (is_front_page()) {
+							?>
+								<div class="footer-social-links">
+									<?php
 									$social_links = get_field('footer_social_links', 'option');
 									foreach ($social_links as $social_link) {
 									?>
-								<?php echo $social_link['social_link']; ?>
-							<?php
+										<?php echo $social_link['social_link']; ?>
+									<?php
 									}
+									?>
+								</div>
+							<?php
+							}
 							?>
-							</div>
+
 						</div>
 					</div>
 					<div class="col-12 col-md-4 col-lg-2 footer-menu-col">
@@ -103,21 +110,29 @@
 		<div class="container-fuid footer-copyright">
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						<div class="site-info">
-							<a href="<?php echo esc_url(__('https://wordpress.org/', 'hive-estates')); ?>">
-								<?php
-								/* translators: %s: CMS name, i.e. WordPress. */
-								printf(esc_html__('Proudly powered by %s', 'hive-estates'), 'WordPress');
-								?>
-							</a>
-							<span class="sep"> | </span>
-							<?php
-							/* translators: 1: Theme name, 2: Theme author. */
-							printf(esc_html__('Theme: %1$s by %2$s.', 'hive-estates'), 'hive-estates', '<a href="https://devteampro.com/">devTeam_studios</a>');
-							?>
-						</div><!-- .site-info -->
+					<div class="col-6 col-md-6 d-flex align-items-center">
+						<p class="copyright-text">
+							Copyright &copy; 2024 Hive Estates, All rights reserved.
+						</p>
 					</div>
+					<?php
+					if (!is_home() && ! is_front_page()) {
+					?>
+						<div class="col-6 col-md-6">
+							<div class="footer-social-links">
+								<?php
+								$social_links = get_field('footer_social_links', 'option');
+								foreach ($social_links as $social_link) {
+								?>
+									<?php echo $social_link['social_link']; ?>
+								<?php
+								}
+								?>
+							</div>
+						</div>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>

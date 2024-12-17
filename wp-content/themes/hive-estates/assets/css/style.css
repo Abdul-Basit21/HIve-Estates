@@ -786,3 +786,32 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   align-items: center;
   color: #fff;
 }
+.footer-copyright p.copyright-text{
+  font-size: 18px;
+  margin: 0;  
+  font-family: 'Quicksand';
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.footer-copyright .footer-social-links{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer-copyright .footer-social-links i{
+  font-size: 22px;
+  color: #b8860b;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #b8860b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.footer-copyright .footer-social-links i:hover{
+  background-color: #b8860b;
+  color: #fff;
+}

@@ -39,7 +39,7 @@
 							<?php
 							else :
 							?>
-								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="/wp-content/uploads/2024/12/Group-1000004714-3-1.png"></a></p>
+								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?= get_field('header_logo', 'option'); ?>"></a></p>
 							<?php
 							endif;
 							$hive_estates_description = get_bloginfo('description', 'display');
@@ -66,30 +66,32 @@
 						<!-- <i class="fa-solid fa-bars-staggered sider-bar-open"></i> -->
 						<i class="ri-bar-chart-horizontal-line sider-bar-open"></i>
 					</div>
-					<div class="sidebar-wrapper">
+					<div id="sidebar-wrapper" class="sidebar-wrapper">
 						<!-- <i class="fa-solid fa-xmark sidebar-close"></i> -->
 						<i class="ri-close-fill sidebar-close"></i>
 						<div class="logo">
-							<img src="/wp-content/uploads/2024/12/Group-1000004714-4.png" alt="">
+							<img src="<?= get_field('sidebar_logo', 'option'); ?>" alt="">
 						</div>
 						<div class="contact-info">
-							<h2>Contact Info:</h2>
-							<p>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 </p>
+							<h2><?= get_field('contact_info', 'option'); ?></h2>
+							<p><?= get_field('contact_address', 'option'); ?></p>
 						</div>
 						<div class="gallery-wrapper">
 							<h2>Gallery</h2>
 							<div class="gallery">
-								<img src="/wp-content/uploads/2024/12/construction-concept-with-engineering-tools_1150-17810.jpg" alt="">
-								<img src="/wp-content/uploads/2024/12/3d-rendering-business-meeting-working-room-office-building-scaled.jpg" alt="">
-								<img src="/wp-content/uploads/2024/12/modern-residential-building_1268-14735.jpg" alt="">
-								<img src="/wp-content/uploads/2024/12/construction-concept-with-engineering-tools_1150-17810.jpg" alt="">
-								<img src="/wp-content/uploads/2024/12/3d-rendering-business-meeting-working-room-office-building-scaled.jpg" alt="">
-								<img src="/wp-content/uploads/2024/12/modern-residential-building_1268-14735.jpg" alt="">
+								<?php
+								$gallery_imgs = get_field('gallery', 'option');
+								foreach ($gallery_imgs as $gallery) {
+								?>
+									<img src="<?php echo $gallery['gallery_img']; ?>" alt="">
+								<?php
+								};
+								?>
 							</div>
 						</div>
 
 						<div class="social-info">
-							<h2>Follow Us On:</h2>
+							<h2><?= get_field('follow_us', 'option'); ?></h2>
 							<div class="social-links">
 								<i class="fa-brands fa-facebook-f"></i>
 								<i class="fa-brands fa-instagram"></i>
@@ -104,8 +106,8 @@
 								<i class="ri-customer-service-2-line"></i>
 							</div>
 							<div class="footer-right-info">
-								<span>Request a demo</span>
-								<a href="">0123456789</a>
+								<span><?= get_field('request_a_demo_text', 'option'); ?></span>
+								<a href="tel:<?= get_field('request_a_demo_number', 'option'); ?>"><?= get_field('request_a_demo_number', 'option'); ?></a>
 							</div>
 						</div>
 					</div>

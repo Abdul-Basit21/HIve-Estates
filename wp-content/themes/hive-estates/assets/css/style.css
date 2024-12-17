@@ -1,6 +1,9 @@
 .post,.page{
   margin: 0;
 }
+.owl-carousel{
+  z-index: 0;
+}
 .container-fluid.header-main {
   padding: 12px 0;
   position: relative;
@@ -96,13 +99,13 @@
 
 /* ------------ sidebar slider ------------  */
 
-.sidebar-wrapper {
+#sidebar-wrapper.sidebar-wrapper {
   position: fixed;
+  z-index: 999999;
   padding: 120px 120px 70px 70px;
   right: -28%;
   top: 0;
   width: 28%;
-  z-index: 2;
   background-color: #fff;
   height: 100%;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
@@ -111,7 +114,7 @@
   flex-direction: column;
   gap: 50px;
 }
-.sidebar-wrapper.active {
+#sidebar-wrapper.sidebar-wrapper.active {
   right: 0;
 }
 .sidebar-wrapper > i {
@@ -157,7 +160,8 @@
   grid-gap: 10px;
 }
 .sidebar-wrapper .gallery img {
-  height: 100%;
+  width: 100%;
+  height: 110px;
   min-height: 110px;
   object-fit: cover;
 }
@@ -525,7 +529,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   border-radius: 40px;
   box-shadow: rgba(17, 17, 26, 0.35) 0px 0px 16px 1px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   margin-bottom: 26px;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -678,6 +682,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
+  letter-spacing: 1px;
 }
 .site-footer .footer-main .footer-menu-col ul{
   margin: 40px 0 0 0;
@@ -685,6 +690,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  list-style: none;
 }
 .site-footer .footer-main .footer-menu-col ul li a {
   text-decoration: none;

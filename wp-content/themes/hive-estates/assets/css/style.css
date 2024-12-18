@@ -102,7 +102,7 @@
 
 #sidebar-wrapper.sidebar-wrapper {
   position: fixed;
-  z-index: 999999;
+  z-index: 4;
   padding: 120px 120px 70px 70px;
   right: -28%;
   top: 0;
@@ -424,7 +424,8 @@ span.dot {
     left: 125%;
   }
 }
-.property-list p.post-excerpt {
+.property-list p.post-excerpt,
+.property-list div.post-excerpt {
   font-size: 16px;
   margin: 20px 0;
   line-height: 28px;
@@ -455,7 +456,8 @@ span.dot {
   letter-spacing: 0.7px;
   margin-bottom: 17px;
 }
-.property-list a.property-title {
+.property-list a.property-title,
+.property-list h2.property-title {
   font-size: 20px;
   font-family: "Plus Jakarta Sans";
   font-weight: 700;
@@ -466,7 +468,8 @@ span.dot {
   display: block;
   transition: all 0.5s ease;
 }
-.property-list a.property-title:hover {
+.property-list a.property-title:hover,
+.property-list h2.property-title:hover {
   color: #b8860b;
 }
 .property-list p.property-address {
@@ -674,7 +677,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .site-footer .footer-main::before {
   content: "";
@@ -833,7 +836,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   position: relative;
   border-bottom: 6px solid #b8860b;
 }
-.inner-banner::before{
+.inner-banner::before {
   content: "";
   position: absolute;
   left: 0;
@@ -863,15 +866,17 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   z-index: 1;
 }
 .inner-banner .inner-banner-wrapper h1.inner-title {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  font-family: "Plus Jakarta Sans";
+  margin-bottom: 20px;
 }
-.inner-banner .inner-banner-wrapper .breadcrumbs{
+.inner-banner .inner-banner-wrapper .breadcrumbs {
   padding: 0;
-  margin: 0;  
+  margin: 0;
 }
-.inner-banner .inner-banner-wrapper .breadcrumbs > span{
+.inner-banner .inner-banner-wrapper .breadcrumbs > span {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -879,11 +884,19 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .inner-banner .inner-banner-wrapper .breadcrumbs > span span,
 .inner-banner .inner-banner-wrapper .breadcrumbs > span a {
   color: #333;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   letter-spacing: 0.5px;
+  font-family: "Quicksand";
+  font-weight: 600;
 }
-.inner-banner .inner-banner-wrapper .breadcrumbs > span i{
+.inner-banner .inner-banner-wrapper .breadcrumbs > span i {
   font-size: 20px;
   color: #b8860b;
+}
+.about-cols .elementor-column > div {
+  transition: all 0.5s ease !important;
+}
+.about-cols .elementor-column > div:hover {
+  transform: translateY(-16px);
 }

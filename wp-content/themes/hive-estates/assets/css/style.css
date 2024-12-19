@@ -65,13 +65,17 @@
 }
 
 /* ------------ Header Center column ------------  */
-
+.header-container .row,
+.header-container .row > div{
+  height: 100%;
+}
 .header-container .header-center-div {
   display: flex;
   align-items: center;
   gap: 40px;
   justify-content: flex-end;
 }
+
 .header-container .header-center-div i.sider-bar-open {
   font-size: 34px;
   cursor: pointer;
@@ -84,6 +88,50 @@
   display: flex;
   gap: 56px;
   align-items: center;
+}
+.header-container .main-navigation .main-menu li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children {
+  position: relative;
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children:hover .sub-menu{
+  transform: scaleY(1);
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children::after {
+  content: "\ea13";
+  position: absolute;
+  right: -20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  font-family: remixicon;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu{
+  min-width: 280px;
+  background-color: #fff;
+  top: 99px;
+  display: block !important;
+  transform: scaleY(0);
+  left: 0;
+  transform-origin: top;
+  transition: all 0.2s ease;
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu li{
+  min-height: 50px;
+  border-bottom: 1px solid #e9e9e9;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu li a{
+  color: #333;
+  padding-left: 16px;
 }
 .header-container .main-navigation .main-menu a {
   color: #000;
@@ -232,7 +280,9 @@ body.home-v1 .header-container .header-right-wrapper .footer-right-info span {
 body.home-v1 .header-container .header-right-wrapper .footer-right-info a {
   color: #fff;
 }
-
+body.home-v1 .header-container .main-navigation .main-menu li.menu-item-has-children::after {
+  color: #fff;
+}
 /* ------------ Content Styling ------------  */
 
 span.dot {
@@ -1055,8 +1105,8 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   display: block;
   transition: all 0.5s ease;
 }
-.tesmonial-container .tesmonial-item .review-stars i{
+.tesmonial-container .tesmonial-item .review-stars i {
   color: #b8860b;
   font-size: 16px;
-  margin-right: 4px;  
+  margin-right: 4px;
 }

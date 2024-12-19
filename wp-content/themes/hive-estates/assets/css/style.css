@@ -984,7 +984,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   justify-content: center;
   gap: 16px;
 }
-.team-container .team-item .member-social-wrapper a{
+.team-container .team-item .member-social-wrapper a {
   border-radius: 8px 8px 0 0;
   width: 45px;
   height: 48px;
@@ -994,14 +994,69 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   background-color: #efefef;
   transition: all 0.4s ease;
 }
-.team-container .team-item .member-social-wrapper a i{
+.team-container .team-item .member-social-wrapper a i {
   color: #b8860b;
   font-size: 16px;
   transition: all 0.4s ease;
 }
-.team-container .team-item .member-social-wrapper a:hover{
+.team-container .team-item .member-social-wrapper a:hover {
   background-color: #b8860b;
 }
-.team-container .team-item .member-social-wrapper a:hover i{
+.team-container .team-item .member-social-wrapper a:hover i {
   color: #efefef;
+}
+.tesmonial-container .tesmonial-item {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tesmonial-container .tesmonial-item i.testimonials-quote {
+  color: #eceffc;
+  font-size: 50px;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  transform: scaleX(-1);
+}
+.tesmonial-container .tesmonial-item .tesmonial-img-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 10px 0 10px 0;
+}
+.tesmonial-container .tesmonial-item .tesmonial-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.tesmonial-container .tesmonial-item .client-review {
+  font-size: 16px;
+  margin: 20px 0 30px 0;
+  line-height: 28px;
+  font-family: "Quicksand";
+  font-weight: 500;
+  color: #8a909a;
+}
+.tesmonial-container .tesmonial-item .client-name {
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #333;
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s ease;
+}
+.tesmonial-container .tesmonial-item .review-stars i{
+  color: #b8860b;
+  font-size: 16px;
+  margin-right: 4px;  
 }

@@ -251,6 +251,7 @@ final class HiveEstates_Addon_Extension {
 		require_once( __DIR__ . '/widgets/post-list.php' );
 		require_once( __DIR__ . '/widgets/why-choose-us.php' );
 		require_once( __DIR__ . '/widgets/team-member.php' );
+		require_once( __DIR__ . '/widgets/testimonials-list.php' );
 
 		// added by EWA - EWA own Register widgets, loading all widget names
 
@@ -260,6 +261,7 @@ final class HiveEstates_Addon_Extension {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Post_List() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Why_Choose_Us_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Our_Team_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Testimonials_List_Widget() );
 
 	}
 

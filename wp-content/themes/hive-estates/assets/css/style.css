@@ -900,3 +900,74 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .about-cols .elementor-column > div:hover {
   transform: translateY(-16px);
 }
+.team-container .team-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  height: 420px;
+}
+.team-container .team-item .team-img-wrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 38px;
+}
+.team-container .team-item .team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.team-container .team-item .member-name {
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #333;
+  margin-bottom: 8px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s ease;
+}
+.team-container .team-item .member-name:hover {
+  color: #b8860b;
+}
+.team-container .team-item .member-designation {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Quicksand";
+  font-weight: 600;
+  color: #8a909a;
+}
+.team-container .team-item .member-social-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.team-container .team-item .member-social-wrapper a{
+  border-radius: 8px 8px 0 0;
+  width: 45px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  transition: all 0.4s ease;
+}
+.team-container .team-item .member-social-wrapper a i{
+  color: #b8860b;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+.team-container .team-item .member-social-wrapper a:hover{
+  background-color: #b8860b;
+}
+.team-container .team-item .member-social-wrapper a:hover i{
+  color: #efefef;
+}

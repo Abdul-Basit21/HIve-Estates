@@ -44,9 +44,8 @@
   z-index: -1;
 }
 .hive-btn a::before {
-  /*   background: blue; */
   transform: translateX(-100%);
-  z-index: 1;
+  z-index: 0;
 }
 .hive-btn a:hover:before {
   transform: translateX(0);
@@ -66,7 +65,7 @@
 
 /* ------------ Header Center column ------------  */
 .header-container .row,
-.header-container .row > div{
+.header-container .row > div {
   height: 100%;
 }
 .header-container .header-center-div {
@@ -89,7 +88,7 @@
   gap: 56px;
   align-items: center;
 }
-.header-container .main-navigation .main-menu li{
+.header-container .main-navigation .main-menu li {
   position: relative;
   display: flex;
   align-items: center;
@@ -98,7 +97,11 @@
 .header-container .main-navigation .main-menu li.menu-item-has-children {
   position: relative;
 }
-.header-container .main-navigation .main-menu li.menu-item-has-children:hover .sub-menu{
+.header-container
+  .main-navigation
+  .main-menu
+  li.menu-item-has-children:hover
+  .sub-menu {
   transform: scaleY(1);
 }
 .header-container .main-navigation .main-menu li.menu-item-has-children::after {
@@ -112,7 +115,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu{
+.header-container
+  .main-navigation
+  .main-menu
+  li.menu-item-has-children
+  ul.sub-menu {
   min-width: 280px;
   background-color: #fff;
   top: 99px;
@@ -122,14 +129,25 @@
   transform-origin: top;
   transition: all 0.2s ease;
 }
-.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu li{
+.header-container
+  .main-navigation
+  .main-menu
+  li.menu-item-has-children
+  ul.sub-menu
+  li {
   min-height: 50px;
   border-bottom: 1px solid #e9e9e9;
   display: flex;
   align-items: center;
   height: 50px;
 }
-.header-container .main-navigation .main-menu li.menu-item-has-children ul.sub-menu li a{
+.header-container
+  .main-navigation
+  .main-menu
+  li.menu-item-has-children
+  ul.sub-menu
+  li
+  a {
   color: #333;
   padding-left: 16px;
 }
@@ -280,7 +298,11 @@ body.home-v1 .header-container .header-right-wrapper .footer-right-info span {
 body.home-v1 .header-container .header-right-wrapper .footer-right-info a {
   color: #fff;
 }
-body.home-v1 .header-container .main-navigation .main-menu li.menu-item-has-children::after {
+body.home-v1
+  .header-container
+  .main-navigation
+  .main-menu
+  li.menu-item-has-children::after {
   color: #fff;
 }
 /* ------------ Content Styling ------------  */
@@ -1109,4 +1131,88 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   color: #b8860b;
   font-size: 16px;
   margin-right: 4px;
+}
+.contact-form-main .inline-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact-form-main .inline-fields .half-field {
+  width: 49%;
+}
+.contact-form-main .inline-fields .half-field span {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.contact-form-main .inline-fields .half-field span::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  color: #807f8595;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-family: remixicon;
+}
+.contact-form-main .full-field.message span{
+  position: relative;
+  display: block;
+}
+.contact-form-main .full-field.message span::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  color: #807f8595;
+  font-size: 20px;
+  font-family: remixicon;
+}
+.contact-form-main .inline-fields .half-field.first-name span::after,
+.contact-form-main .inline-fields .half-field.last-name span::after {
+  content: "\f255";
+}
+.contact-form-main .inline-fields .half-field.email span::after {
+  content: "\ef01";
+}
+.contact-form-main .inline-fields .half-field.phone span::after {
+  content: "\efe9";
+}
+.contact-form-main .full-field.message span::after {
+  content: "\eb50";
+}
+.contact-form-main .inline-fields .half-field input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding-left: 12px;
+  background-color: #f1f0f5;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+.contact-form-main .inline-fields .half-field input::placeholder,
+.contact-form-main .full-field textarea::placeholder {
+  color: #807f85;
+}
+.contact-form-main .full-field textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #f1f0f5;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  resize: none;
+}
+.contact-form-main input, .contact-form-main textarea{
+  font-size: 15px;
+  color: #333;
+  font-family: "Quicksand";
+  font-weight: 600;
 }

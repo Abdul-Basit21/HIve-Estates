@@ -39,7 +39,20 @@
 							<?php
 							else :
 							?>
-								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?= get_field('header_logo', 'option'); ?>"></a></p>
+								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+										<?php
+										if (!is_home() && ! is_front_page()) {
+										?>
+											<img src="/wp-content/uploads/2024/12/Group-1000004714-2-1.png">
+
+										<?php
+										} else {
+										?>
+											<img src="<?= get_field('header_logo', 'option'); ?>">
+										<?php
+										}
+										?>
+									</a></p>
 							<?php
 							endif;
 							$hive_estates_description = get_bloginfo('description', 'display');

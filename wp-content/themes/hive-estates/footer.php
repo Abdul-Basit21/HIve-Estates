@@ -13,6 +13,9 @@
 	?>
 
 	<footer id="colophon" class="site-footer container-fluid  p-0">
+	<?php
+	if (is_front_page()) :
+		?>
 		<div class="container-fluid newsletter-wrapper">
 			<div class="container">
 				<v class="row">
@@ -27,6 +30,7 @@
 				</v>
 			</div>
 		</div>
+		<?php endif; ?>
 		<div class="container-fluid footer-main">
 			<div class="container">
 				<div class="row">

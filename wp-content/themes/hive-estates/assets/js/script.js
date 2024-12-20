@@ -30,5 +30,20 @@ $(document).ready(function () {
         navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
         dots: false
     });
+
+
+    $(".gallery-masonry-item [data-fancybox]").fancybox({
+        loop: true,
+        buttons: [
+            "zoom",
+            "share",
+            "slideShow",
+            "fullScreen",
+            "download",
+            "thumbs",
+            "close"
+        ]		
+    });
+
     
 });

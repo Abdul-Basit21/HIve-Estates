@@ -18,9 +18,29 @@
 .container.header-container .site-branding .site-title {
   margin: 0;
 }
+.hive-btn {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hive-btn a {
   position: relative;
   overflow: hidden;
+  background-color: #b8860bbd;
+  font-family: "Plus Jakarta Sans", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  fill: #ffffff;
+  color: #ffffff;
+  border-radius: 0px 0px 0px 0px;
+  padding: 20px 46px 20px 40px;
+  text-decoration: none;
 }
 .hive-btn span {
   z-index: 5;
@@ -147,6 +167,7 @@
   a {
   color: #333;
   padding-left: 16px;
+  text-transform: capitalize;
 }
 .header-container .main-navigation .main-menu a {
   color: #000;
@@ -1220,17 +1241,16 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .contact-form-main input[type="submit"]:hover {
   background-color: #333;
 }
-.gallery-masonry-wrapper{
+.gallery-masonry-wrapper {
   display: grid;
-	grid-gap: 16px;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-auto-rows: 200px;
-	grid-auto-flow: dense;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
   background-color: unset;
   padding: 0;
   box-shadow: none;
   border-radius: 0;
-
 }
 
 .gallery-masonry-wrapper .gallery-masonry-item::after,
@@ -1258,7 +1278,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   -ms-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
-.gallery-masonry-wrapper .gallery-masonry-item:hover img ,
+.gallery-masonry-wrapper .gallery-masonry-item:hover img,
 .hive-gallery-container .hive-gallery-item:hover img {
   transform: scale(1.04);
   border-radius: 10px;
@@ -1269,9 +1289,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   animation: imgShine 1s;
 }
 
-
-
-.gallery-masonry-wrapper div.gallery-masonry-item{
+.gallery-masonry-wrapper div.gallery-masonry-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1280,17 +1298,17 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-.gallery-masonry-wrapper div.gallery-masonry-item a{
+.gallery-masonry-wrapper div.gallery-masonry-item a {
   height: 100%;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
-.gallery-masonry-wrapper div.gallery-masonry-item  img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.gallery-masonry-wrapper div.gallery-masonry-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
   transition: all 0.4s ease;
 }
 .gallery-masonry-wrapper > div:nth-child(3n) {
@@ -1309,9 +1327,42 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   position: relative;
   overflow: hidden;
 }
-.hive-gallery-container .hive-gallery-item img{
+.hive-gallery-container .hive-gallery-item img {
   height: 100%;
   width: 100%;
   border-radius: inherit;
   transition: all 0.4s ease;
+}
+section.error-404.not-found {
+  padding: 150px 0;
+}
+section.error-404.not-found .page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.error-404.not-found .page-header img {
+  margin: 80px;
+}
+section.error-404.not-found .page-header h1.page-title {
+  color: #333;
+  font-size: 72px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+section.error-404.not-found div.page-content p{
+  font-size: 22px;
+  width: 80%;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  color: #111;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 20px auto;
+}
+section.error-404.not-found .hive-btn{
+  margin: 30px auto;
 }

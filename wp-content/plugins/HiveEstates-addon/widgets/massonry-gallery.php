@@ -97,9 +97,9 @@ class Masonry_Gallery_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
         $gallery_images = $settings['masonry-gallery'];
 ?>
-        <div class="container gellery-masonry-container">
+        <div class="container gallery-masonry-container">
             <div class="row">
-                <div class="gellery-masonry-wrapper">
+                <div class="gallery-masonry-wrapper">
                     <?php
                     foreach ($gallery_images as $gallery_item) {
                     ?>

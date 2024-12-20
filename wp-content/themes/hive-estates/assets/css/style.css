@@ -1220,35 +1220,35 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .contact-form-main input[type="submit"]:hover {
   background-color: #333;
 }
-.gellery-masonry-wrapper{
+.gallery-masonry-wrapper{
   display: grid;
 	grid-gap: 16px;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	grid-auto-rows: 200px;
 	grid-auto-flow: dense;
 }
-.gellery-masonry-wrapper div.gallery-masonry-item{
+.gallery-masonry-wrapper div.gallery-masonry-item{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.gellery-masonry-wrapper div.gallery-masonry-item a{
+.gallery-masonry-wrapper div.gallery-masonry-item a{
   height: 100%;
   width: 100%;
 }
-.gellery-masonry-wrapper div.gallery-masonry-item  img {
+.gallery-masonry-wrapper div.gallery-masonry-item  img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 10px;
 }
-.gellery-masonry-wrapper > div:nth-child(3n) {
+.gallery-masonry-wrapper > div:nth-child(3n) {
   grid-row: span 2;
 }
-.gellery-masonry-wrapper > div:nth-child(5n) {
+.gallery-masonry-wrapper > div:nth-child(5n) {
   grid-row: span 2;
 }
-.gellery-masonry-wrapper > div:nth-child(7n) {
+.gallery-masonry-wrapper > div:nth-child(7n) {
   grid-column: span 2;
 }

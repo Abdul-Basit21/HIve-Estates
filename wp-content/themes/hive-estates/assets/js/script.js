@@ -44,6 +44,15 @@ $(document).ready(function () {
             "close"
         ]		
     });
-
     
 });
+gsap.from('.gallery-masonry-wrapper div', {
+    y: -20,
+    delay: 0.5,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: '.gallery-masonry-container',
+        scroller: 'body',
+    }
+})

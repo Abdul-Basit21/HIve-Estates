@@ -165,10 +165,11 @@ function hive_estates_scripts()
 	wp_enqueue_script('hive-estates-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-owlCarousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-scriptgsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array('jquery'), _S_VERSION, true);
+	wp_enqueue_script('hive-estates-scriptscrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-fancyBox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), _S_VERSION, true);
-	
+
 
 
 
@@ -258,9 +259,9 @@ function add_meta_custom_body_class($classes)
 }
 add_filter('body_class', 'add_meta_custom_body_class');
 
-define( 'WPCF7_AUTOP', false );
+define('WPCF7_AUTOP', false);
 
-add_filter( 'widget_text', 'do_shortcode' );
+add_filter('widget_text', 'do_shortcode');
 
 
 

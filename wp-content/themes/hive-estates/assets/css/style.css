@@ -1226,22 +1226,69 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	grid-auto-rows: 200px;
 	grid-auto-flow: dense;
+  background-color: unset;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+
 }
+
+.gallery-masonry-wrapper .gallery-masonry-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+.gallery-masonry-wrapper .gallery-masonry-item:hover img {
+  transform: scale(1.04);
+  border-radius: 10px;
+}
+.gallery-masonry-wrapper .gallery-masonry-item:hover::after {
+  -webkit-animation: imgShine 1s;
+  animation: imgShine 1s;
+}
+
+
+
 .gallery-masonry-wrapper div.gallery-masonry-item{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 .gallery-masonry-wrapper div.gallery-masonry-item a{
   height: 100%;
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .gallery-masonry-wrapper div.gallery-masonry-item  img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 10px;
+  transition: all 0.4s ease;
 }
 .gallery-masonry-wrapper > div:nth-child(3n) {
   grid-row: span 2;

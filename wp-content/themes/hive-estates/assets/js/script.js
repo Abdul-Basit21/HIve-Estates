@@ -12,7 +12,7 @@ $(document).ready(function () {
         items: 5.5,
         margin: 20,
         autoplay: true,
-        autoplaySpeed:2000,
+        autoplaySpeed: 2000,
         loop: true,
         nav: true,
         navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
@@ -24,7 +24,7 @@ $(document).ready(function () {
         items: 3.5,
         margin: 20,
         autoplay: true,
-        autoplaySpeed:2000,
+        autoplaySpeed: 2000,
         loop: true,
         nav: true,
         navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
@@ -42,9 +42,9 @@ $(document).ready(function () {
             "download",
             "thumbs",
             "close"
-        ]		
+        ]
     });
-    
+
 });
 gsap.from('.gallery-masonry-wrapper div', {
     y: -20,

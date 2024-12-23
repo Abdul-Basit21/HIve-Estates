@@ -52,4 +52,14 @@ gsap.from('.gallery-masonry-wrapper div', {
         trigger: '.gallery-masonry-container',
         scroller: 'body',
     }
-})
+});
+gsap.from('.hive-accordion div.accordion-item', {
+    x: -20,
+    delay: 0.5,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: '.faqs-container',
+        scroller: 'body',
+    }
+});

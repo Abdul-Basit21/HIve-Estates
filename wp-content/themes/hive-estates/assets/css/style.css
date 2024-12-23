@@ -137,7 +137,7 @@
   .main-menu
   li.menu-item-has-children
   ul.sub-menu {
-  min-width: 280px;
+  min-width: 260px;
   background-color: #fff;
   top: 99px;
   display: block !important;
@@ -1397,4 +1397,16 @@ section.error-404.not-found .hive-btn {
   font-size: 17px;
   font-weight: 600;
   line-height: 30px;
+}
+.faqs-container .accordion button::after {
+  content: "\f105" !important;
+  background-image: unset;
+  font-family: 'FontAwesome';
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faqs-container .accordion .accordion-button:not(.collapsed)::after{
+  transform: rotate(90deg);
 }

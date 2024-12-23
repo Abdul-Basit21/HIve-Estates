@@ -112,7 +112,7 @@ class Hive_Faqs_Widget extends \Elementor\Widget_Base
                 foreach ($faqs_section as $key => $faqs) {
                 ?>
                     <div class="col-10 p-0 mt-3">
-                        <div class="accordion" id="accordionExample-<?= $key ?>">
+                        <div class="accordion hive-accordion" id="accordionExample-<?= $key ?>">
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header faq-title">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-<?= $key ?>" aria-expanded="false" aria-controls="collapseOne-<?= $key ?>">

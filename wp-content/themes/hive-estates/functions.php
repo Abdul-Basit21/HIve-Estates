@@ -163,6 +163,7 @@ function hive_estates_scripts()
 	wp_enqueue_script('hive-estates-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	wp_enqueue_script('hive-estates-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), _S_VERSION, true);
+	wp_enqueue_script('hive-estates-bootstrapJS', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-owlCarousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-scriptgsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('hive-estates-scriptscrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array('jquery'), _S_VERSION, true);

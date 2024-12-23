@@ -36,11 +36,8 @@ $(document).ready(function () {
         loop: true,
         buttons: [
             "zoom",
-            "share",
             "slideShow",
             "fullScreen",
-            "download",
-            "thumbs",
             "close"
         ]
     });

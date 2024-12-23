@@ -16,7 +16,7 @@ class Hive_Gallery_Widget extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-posts-masonry';
+        return 'eicon-gallery-grid';
     }
 
     public function get_categories()
@@ -102,7 +102,7 @@ class Hive_Gallery_Widget extends \Elementor\Widget_Base
                 <?php
                 foreach ($hive_gallery as $hive_gallery_item) {
                 ?>
-                    <div class="col-12 col-md-3 col-lg-4 mb-3">
+                    <div class="col-12 col-md-3 col-lg-3 mb-3">
                         <div class="hive-gallery-item">
                             <img src="<?php echo $hive_gallery_item['hive_gallery_images']['url'] ?>" alt="">
                         </div>

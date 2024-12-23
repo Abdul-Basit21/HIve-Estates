@@ -1323,7 +1323,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .hive-gallery-container .hive-gallery-item {
   height: 100%;
   border-radius: 12px;
-  max-height: 330px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -1332,6 +1332,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   width: 100%;
   border-radius: inherit;
   transition: all 0.4s ease;
+  object-fit: cover;
 }
 section.error-404.not-found {
   padding: 150px 0;
@@ -1353,7 +1354,7 @@ section.error-404.not-found .page-header h1.page-title {
   font-family: "Jost";
   font-weight: 600;
 }
-section.error-404.not-found div.page-content p{
+section.error-404.not-found div.page-content p {
   font-size: 22px;
   width: 80%;
   font-family: "Plus Jakarta Sans";
@@ -1363,6 +1364,37 @@ section.error-404.not-found div.page-content p{
   text-align: center;
   margin: 20px auto;
 }
-section.error-404.not-found .hive-btn{
+section.error-404.not-found .hive-btn {
   margin: 30px auto;
+}
+.faqs-container .accordion .accordion-item h2 button {
+  border: 1px solid #e2e2e2 !important;
+  background-color: transparent !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-size: 17px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #333 !important;
+  text-transform: capitalize;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.faqs-container .accordion .accordion-item h2 button[aria-expanded="false"] {
+  background-color: #f5f8fd !important;
+}
+.faqs-container .accordion .accordion-item {
+  border: none !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.faqs-container .accordion .accordion-item .faq-para {
+  background-color: transparent;
+  color: #00000080;
+  font-family: "Quicksand", Sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 30px;
 }

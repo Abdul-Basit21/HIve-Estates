@@ -1637,6 +1637,10 @@ section.error-404.not-found .hive-btn {
   height: 40px;
 }
 
+/* ------------ Blog Detail Page ------------  */
+.blog-detail{
+  padding: 100px 0;
+}
 
 
 @media (min-width: 1200px) and (max-width: 1300px) {

@@ -128,7 +128,7 @@
 								$social_links = get_field('footer_social_links', 'option');
 								foreach ($social_links as $social_link) {
 								?>
-									<?php echo $social_link['social_link']; ?>
+									<a href="<?php echo $social_link['link']; ?>"><?php echo $social_link['social_link']; ?></a>
 								<?php
 								}
 								?>

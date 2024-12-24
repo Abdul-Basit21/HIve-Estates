@@ -111,10 +111,14 @@
 						<div class="social-info">
 							<h2><?= get_field('follow_us', 'option'); ?></h2>
 							<div class="social-links">
-								<i class="fa-brands fa-facebook-f"></i>
-								<i class="fa-brands fa-instagram"></i>
-								<i class="fa-brands fa-linkedin-in"></i>
-								<i class="fa-brands fa-youtube"></i>
+								<?php
+								$sidebar_social_links = get_field('sidebar_social_links', 'option');
+								foreach ($sidebar_social_links as $sidebar_social_link) {
+								?>
+									<a href="<?php echo $sidebar_social_link['sidebar_socail_link']; ?>"><?php echo $sidebar_social_link['sidebar-social_icon']; ?></a>
+								<?php
+								}
+								?>
 							</div>
 						</div>
 					</div>

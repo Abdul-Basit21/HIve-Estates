@@ -13,23 +13,23 @@
 	?>
 
 	<footer id="colophon" class="site-footer container-fluid  p-0">
-	<?php
-	if (is_front_page()) :
+		<?php
+		if (is_front_page()) :
 		?>
-		<div class="container-fluid newsletter-wrapper">
-			<div class="container">
-				<v class="row">
-					<div class="col-7 d-flex align-items-center">
-						<h4 class="newsletter-title">
-							Newsletter To Get Updated The Latest News
-						</h4>
-					</div>
-					<div class="col-5">
-						<?php echo do_shortcode('[contact-form-7 id="c90925f" title="newsletter-form"]'); ?>
-					</div>
-				</v>
+			<div class="container-fluid newsletter-wrapper">
+				<div class="container">
+					<v class="row">
+						<div class="col-7 d-flex align-items-center">
+							<h4 class="newsletter-title">
+								Newsletter To Get Updated The Latest News
+							</h4>
+						</div>
+						<div class="col-5">
+							<?php echo do_shortcode('[contact-form-7 id="c90925f" title="newsletter-form"]'); ?>
+						</div>
+					</v>
+				</div>
 			</div>
-		</div>
 		<?php endif; ?>
 		<div class="container-fluid footer-main">
 			<div class="container">
@@ -48,7 +48,7 @@
 									$social_links = get_field('footer_social_links', 'option');
 									foreach ($social_links as $social_link) {
 									?>
-										<?php echo $social_link['social_link']; ?>
+										<a href="<?php echo $social_link['link']; ?>"><?php echo $social_link['social_link']; ?></a>
 									<?php
 									}
 									?>

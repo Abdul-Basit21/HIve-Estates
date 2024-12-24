@@ -1498,7 +1498,7 @@ section.error-404.not-found .hive-btn {
   span.prop-detail-price {
   font-size: 30px;
   font-family: "Plus Jakarta Sans";
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #b8860b;
 }
@@ -1566,7 +1566,7 @@ section.error-404.not-found .hive-btn {
   letter-spacing: 1px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .property-detail-container .property-overview .overview-main {
   display: flex;
@@ -1596,7 +1596,7 @@ section.error-404.not-found .hive-btn {
   > span {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: #1c1c1e;
   font-size: 18px;
   font-family: "Quicksand";
@@ -1609,15 +1609,32 @@ section.error-404.not-found .hive-btn {
   span:not(:last-child) {
   border-right: 1px solid #e2e2e2;
 }
-
-.property-detail-container .property-detail-right h2{
+.property-detail-container .property-detail-right{
+  padding-top: 30px;
+}
+.property-detail-container .property-detail-right .cont-form{
+  padding: 24px 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.property-detail-container .property-detail-right .cont-form h2{
   font-size: 19px;
   font-family: "Plus Jakarta Sans";
   letter-spacing: 1px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: capitalize;
+}
+.property-detail-container .property-detail-right .property-form input,
+.property-detail-container .property-detail-right .property-form textarea{
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  padding: 12px;
+}
+.property-detail-container .property-detail-right .property-form input:not(input[type="submit"]){
+  height: 40px;
 }
 
 

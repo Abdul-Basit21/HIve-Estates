@@ -70,7 +70,7 @@ $(document).ready(function () {
                 .addClass("current");
         })
         .owlCarousel({
-            items: 4.3,
+            items: 4,
             dots: false,
             nav: false,
             margin: 12,

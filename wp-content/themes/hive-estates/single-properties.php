@@ -18,16 +18,16 @@
         <div class="col-9">
             <div class="property-info-top">
                 <div class="info-top-left">
-                    <span class="prop-tag">
+                    <div class="tags-wrapper">
                         <?php
                         $property_tags = get_the_tags($property_id);
                         if ($property_tags): ?>
                             <?php foreach ($property_tags as $tag): ?>
-                                <?php echo esc_html($tag->name); ?>
+                                <span class="prop-tag"> <?php echo esc_html($tag->name); ?></span>
                             <?php endforeach; ?>
                         <?php endif;
                         ?>
-                    </span>
+                    </div>
                     <h2><?php the_title(); ?></h2>
                     <p>
                         <i class="fa-solid fa-location-arrow"></i>
@@ -63,6 +63,49 @@
                         };
                         ?>
                     </div>
+                </div>
+            </div>
+            <div class="property-detail-content-wrapper">
+                <?php echo the_content(); ?>
+            </div>
+            <div class="property-overview">
+                <h2>Property Overview</h2>
+                <div class="overview-main">
+                    <span class="prop-icon beds">
+                        Bedrooms
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            <?= get_field('beds', $property_id); ?>
+                        </span>
+                    </span>
+                    <span class="prop-icon baths">
+                        Baths
+                        <span>
+                            <i class="fa-solid fa-bath"></i>
+                            <?= get_field('baths', $property_id); ?>
+                        </span>
+                    </span>
+                    <span class="prop-icon area">
+                        Area
+                        <span>
+                            <i class="fa-solid fa-expand"></i>
+                            <?= get_field('area', $property_id); ?>
+                        </span>
+                    </span>
+                    <span class="prop-icon room">
+                        Rooms
+                        <span>
+                            <i class="ri-codepen-line"></i>
+                            <?= get_field('rooms', $property_id); ?>
+                        </span>
+                    </span>
+                    <span class="prop-icon year">
+                        Year Built
+                        <span>
+                            <i class="ri-codepen-line"></i>
+                            <?= get_field('year_built', $property_id); ?>
+                        </span>
+                    </span>
                 </div>
             </div>
         </div>

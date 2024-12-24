@@ -258,7 +258,7 @@
   color: #fff;
 }
 
-.sidebar-wrapper .social-info .social-links a{
+.sidebar-wrapper .social-info .social-links a {
   text-decoration: none;
 }
 .sidebar-wrapper .social-info .social-links i {
@@ -804,7 +804,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   align-items: center;
   margin-top: 40px;
 }
-.site-footer .footer-main .footer-first-col .footer-social-links a{
+.site-footer .footer-main .footer-first-col .footer-social-links a {
   text-decoration: none;
 }
 .site-footer .footer-main .footer-first-col .footer-social-links i {
@@ -904,8 +904,8 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   align-items: center;
   justify-content: flex-end;
 }
-.footer-copyright .footer-social-links a{
-  text-decoration: none;  
+.footer-copyright .footer-social-links a {
+  text-decoration: none;
 }
 .footer-copyright .footer-social-links i {
   font-size: 22px;
@@ -1267,7 +1267,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 }
 .elementor-icon-box-wrapper a {
   text-decoration: none;
-  color: #8A909A;
+  color: #8a909a;
 }
 .gallery-masonry-wrapper {
   display: grid;
@@ -1429,18 +1429,118 @@ section.error-404.not-found .hive-btn {
 .faqs-container .accordion button::after {
   content: "\f105" !important;
   background-image: unset;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   transform: rotate(0deg);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.faqs-container .accordion .accordion-button:not(.collapsed)::after{
+.faqs-container .accordion .accordion-button:not(.collapsed)::after {
   transform: rotate(90deg);
 }
 
 /* ------------ Property Detail Page ------------  */
 
-.property-detail-container{
+.property-detail-container {
   padding: 100px 0;
+}
+.property-detail-container .property-info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.property-detail-container .property-info-top .info-top-left span.prop-tag {
+  min-width: 85px;
+  max-width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 13px;
+  color: #333;
+  font-family: "Jost";
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.property-detail-container .property-info-top .info-top-left h2 {
+  font-size: 42px;
+  font-family: "Plus Jakarta Sans";
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #333;
+}
+.property-detail-container .property-info-top .info-top-left p {
+  color: #8a909a;
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.property-detail-container .property-info-top .info-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.property-detail-container
+  .property-info-top
+  .info-top-right
+  span.prop-detail-price {
+  font-size: 30px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #b8860b;
+}
+.property-detail-container
+  .property-info-top
+  .info-top-right
+  span.prop-detail-area {
+  font-size: 24px;
+  font-family: "Quicksand";
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+.property-detail-gallery{
+  margin: 40px 0;
+}
+
+.property-detail-gallery #big .owl-stage-outer{
+  border-radius: 12px;
+}
+.property-detail-gallery #big .owl-item {
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.property-detail-gallery #big .owl-item img{
+  border-radius: inherit;
+  max-height: 550px;
+  object-fit: cover;
+}
+#thumbs .owl-item{
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+#thumbs .owl-item img{
+  border-radius: inherit;
+  object-fit: cover;
+  max-height: 180px;
+  height: 180px;
+}
+.property-detail-gallery #thumbs .owl-stage-outer{
+  padding: 12px 0 20px 0;
+}
+.property-detail-gallery #big .owl-nav,
+.property-detail-gallery #thumbs .owl-nav {
+  display: none !important;
 }

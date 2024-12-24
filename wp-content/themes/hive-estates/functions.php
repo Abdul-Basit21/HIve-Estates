@@ -283,7 +283,7 @@ function hive_property_init()
 		'new_item'              => __('New Property', 'hive-estates'),
 		'edit_item'             => __('Edit Property', 'hive-estates'),
 		'view_item'             => __('View Property', 'hive-estates'),
-		'all_items'             => __('All Propertys', 'hive-estates'),
+		'all_items'             => __('All Properties', 'hive-estates'),
 		'search_items'          => __('Search Propertys', 'hive-estates'),
 		'parent_item_colon'     => __('Parent Propertys:', 'hive-estates'),
 		'not_found'             => __('No Propertys found.', 'hive-estates'),

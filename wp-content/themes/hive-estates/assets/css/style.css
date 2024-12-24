@@ -1609,3 +1609,39 @@ section.error-404.not-found .hive-btn {
   span:not(:last-child) {
   border-right: 1px solid #e2e2e2;
 }
+
+.property-detail-container .property-detail-right h2{
+  font-size: 19px;
+  font-family: "Plus Jakarta Sans";
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .header-container .main-navigation .main-menu a{
+    font-size: 12px;  
+  }
+  .header-container .header-center-div i.sider-bar-open{
+    font-size: 28px;
+  }
+  .header-container .header-right-wrapper .icon i{
+    font-size: 32px;
+  }
+  .header-container .header-right-wrapper .footer-right-info span{
+    font-size: 14px;
+  }
+  .header-container .header-right-wrapper .footer-right-info a{
+    font-size: 20px;
+  }
+  .elementor-inner-section > div{
+    max-width: 1120px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1190px) {
+  
+}

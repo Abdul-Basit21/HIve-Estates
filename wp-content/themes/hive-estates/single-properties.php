@@ -95,21 +95,28 @@
                     <span class="prop-icon room">
                         Rooms
                         <span>
-                            <i class="ri-codepen-line"></i>
+                            <i class="ri-door-open-fill"></i>
                             <?= get_field('rooms', $property_id); ?>
                         </span>
                     </span>
                     <span class="prop-icon year">
                         Year Built
                         <span>
-                            <i class="ri-codepen-line"></i>
+                            <i class="fa-regular fa-calendar-days"></i>
                             <?= get_field('year_built', $property_id); ?>
                         </span>
                     </span>
                 </div>
             </div>
         </div>
-        <div class="col-3"></div>
+        <div class="col-3">
+            <div class="property-detail-right">
+                <div class="cont-form">
+                    <h2>Contact the listing owner</h2>
+                    <?php echo do_shortcode('[contact-form-7 id="bbf1795" title="property-detail-form"]'); ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

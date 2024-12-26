@@ -1675,6 +1675,22 @@ section.error-404.not-found .hive-btn {
   font-weight: 500;
   font-size: 16px;
 }
+.blog-detail .blog-detail-content{
+  margin-top: 20px;
+}
+.blog-detail .blog-detail-content p{
+  color: #1c1c1e;
+  font-family: "Quicksand";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+}
+.blog-detail .blog-detail-content img{
+  border-radius: 8px;
+  margin: 5px;
+  max-height: 440px;
+  width: 90%;
+}
 @media (min-width: 1200px) and (max-width: 1300px) {
   .header-container .main-navigation .main-menu a {
     font-size: 12px;

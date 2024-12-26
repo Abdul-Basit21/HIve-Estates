@@ -54,7 +54,7 @@ get_header();
 						<h2><?php the_title(); ?></h2>
 					</div>
 				</div>
-				<div class="blog-img-feature">
+				<div class="blog-detail-content">
 					<?php echo the_content() ?>
 				</div>
 				<?php

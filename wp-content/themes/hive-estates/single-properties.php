@@ -108,6 +108,21 @@
                     </span>
                 </div>
             </div>
+            <div class="properties-amenities-wrapper property-overview">
+                <h2 class="amenity"><i class="ri-git-fork-line"></i>Property Amenities</h2>
+                <div class="amenity-items">
+                    <ul>
+                        <?php
+                        $property_amenities = get_field('property_amenities', $property_id);
+                        foreach ($property_amenities as $amenity) {
+                        ?>
+                            <li><?php echo $amenity['amenity']; ?></li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="col-3">
             <div class="property-detail-right">

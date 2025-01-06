@@ -28,7 +28,7 @@ get_header();
 
 	<div class="container blog-detail property-detail-container">
 		<div class="row">
-			<div class="col-12 col-md-12 col-lg-8">
+			<div class="col-12 col-md-12 col-lg-9">
 
 				<div class="blog-img-feature">
 					<?php echo get_the_post_thumbnail(); ?>
@@ -80,7 +80,46 @@ get_header();
 				// endwhile; // End of the loop.
 				?>
 			</div>
-			<div class="col-12 col-md-12 col-lg-4"></div>
+			<div class="col-12 col-md-12 col-lg-3 post-detail-right">
+				<div class="post-details-categories">
+					<h2 class="post-categories">Post Categories</h2>
+					<?php
+					// Fetch all categories
+					$categories = get_categories();
+
+					// Loop through each category and display name with post count
+					if (!empty($categories)) {
+						echo '<ul class="category-list">';
+						foreach ($categories as $category) {
+							echo '<li class="category-item">';
+							echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+							echo ' (' . $category->count . ')';
+							echo '</li>';
+						}
+						echo '</ul>';
+					}
+					?>
+				</div>
+				<div class="post-details-categories post-details-tags mt-4">
+					<h2 class="post-categories">Post Tags</h2>
+					<?php
+					$tags = get_tags();
+					echo '<div class="category-tags">';
+					foreach ($tags as $tag) {
+						echo '<a class="category-tag" href="' . esc_url(get_category_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+					}
+					echo '</div>';
+					?>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-9">
+				<div class="related-posts">
+					<?php cc_related_posts(); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 

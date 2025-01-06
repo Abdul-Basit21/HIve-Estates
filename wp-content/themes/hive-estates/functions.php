@@ -231,7 +231,7 @@ function display_custom_class_meta_box($post)
 ?>
 	<label for="custom_body_class">Enter Custom Class:</label>
 	<input type="text" id="custom_body_class" name="custom_body_class" value="<?php echo esc_attr($custom_class); ?>" style="width: 100%;" />
-<?php
+	<?php
 }
 
 // Save the meta box data
@@ -346,4 +346,92 @@ if (function_exists('acf_add_options_page')) {
 		'menu_title'    => 'Footer',
 		'parent_slug'   => 'theme-general-settings',
 	));
+}
+
+
+
+// ********* BEGIN HERE *********
+
+function cc_related_posts($args = array())
+{
+
+	global $post;
+
+	// default args
+	$args = wp_parse_args($args, array(
+		'post_id' => !empty($post) ? $post->ID : '',
+		'taxonomy' => 'category',
+		'limit' => 3,
+		'post_type' => !empty($post) ? $post->post_type : 'post',
+		'orderby' => 'rand'
+	));
+
+	// check taxonomy
+	if (!taxonomy_exists($args['taxonomy'])) {
+		return;
+	}
+
+	// post taxonomies
+	$taxonomies = wp_get_post_terms($args['post_id'], $args['taxonomy'], array('fields' => 'ids'));
+
+	if (empty($taxonomies)) {
+		return;
+	}
+
+	// query
+	$related_posts = get_posts(array(
+		'post__not_in' => (array)$args['post_id'],
+		'post_type' => $args['post_type'],
+		'tax_query' => array(
+			array(
+				'taxonomy' => $args['taxonomy'],
+				'field' => 'term_id',
+				'terms' => $taxonomies
+			),
+		),
+		'posts_per_page' => $args['limit'],
+		'orderby' => $args['orderby'],
+		'order' => $args['order']
+	));
+
+	if (!empty($related_posts)) { ?>
+		<div class="related-posts mt-5">
+			<h3 class="widget-title"><?php _e('Related articles', 'textdomain'); ?></h3>
+
+			<div class="related-posts-list">
+				<?php
+				foreach ($related_posts as $post) {
+					setup_postdata($post);
+				?>
+					<div class="related-post blog-post-item property-list">
+						<div class="post-thumbnail property-img-wrapper hover-img-efftect">
+							<a class="title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+								<?php if (has_post_thumbnail()) { ?>
+									<div class="thumb">
+										<?php echo get_the_post_thumbnail(null, 'medium', array('alt' => the_title_attribute(array('echo' => false)))); ?>
+									</div>
+								<?php } ?>
+							</a>
+						</div>
+						<div class="post-content">
+							<h4><?php the_title(); ?></h4>
+							<p class="post-excerpt">
+								<?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+							</p>
+							<div class="post-meta">
+								<span class="post-date">
+									<i class="ri-calendar-todo-line"></i>
+									<?php echo get_the_date(); ?>
+								</span>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+<?php
+	}
+
+	wp_reset_postdata();
 }

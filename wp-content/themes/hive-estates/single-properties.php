@@ -130,6 +130,55 @@
                     <h2>Contact the listing owner</h2>
                     <?php echo do_shortcode('[contact-form-7 id="bbf1795" title="property-detail-form"]'); ?>
                 </div>
+                <div class="post-details-categories mt-5">
+                    <h2 class="post-categories">Related Properties</h2>
+                    <?php
+                    // Fetch current property ID
+                    $current_property_id = get_the_ID();
+
+                    // Get taxonomy terms of the current property
+                    $terms = wp_get_post_terms($current_property_id, 'property_category', array('fields' => 'ids'));
+
+                    if (!empty($terms)) {
+                        // Query related properties
+                        $related_properties_query = new WP_Query(array(
+                            'post_type' => 'properties', // Custom post type
+                            'posts_per_page' => 3,       // Number of related properties to show
+                            'post__not_in' => array($current_property_id), // Exclude current property
+                            // 'tax_query' => array(
+                            //     array(
+                            //         'taxonomy' => 'property_category', // Custom taxonomy
+                            //         'field'    => 'term_id',
+                            //         'terms'    => $terms,
+                            //     ),
+                            // ),
+                        ));
+
+                        if ($related_properties_query->have_posts()) {
+                            while ($related_properties_query->have_posts()) {
+                                echo '<div class="related-properties">';
+                                $related_properties_query->the_post();
+                    ?>
+                                <div class="rel-prop-img">
+                                    <?php echo get_the_post_thumbnail(); ?>
+                                </div>
+                                <div class="rel-prop-info">
+                                    <span class="property-price">$<?= get_field('property_price', $property_id); ?></span>
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <p>
+                                        <i class="fa-solid fa-location-arrow"></i>
+                                        <span class="prop-detail-location"><?= get_field('address', $property_id); ?></span>
+                                    </p>
+                                </div>
+                    <?php
+                            echo '</div>';
+                            }
+                        }
+                        // Restore original post data
+                        wp_reset_postdata();
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>

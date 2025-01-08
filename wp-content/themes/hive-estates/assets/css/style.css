@@ -1944,6 +1944,49 @@ section.error-404.not-found .hive-btn {
   border-color: #b8860b;
 }
 
+/* ------------ Properties Page ------------  */
+.property-filter-container form{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: end;
+}
+.property-filter-container form input[type="text"]{
+  width: 40%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #807f85;
+  color: #1c1c1e;
+  padding: 12px;
+}
+.property-filter-container form select{
+  width: 12%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #807f85;
+  color: #1c1c1e;
+  border-radius: 8px;
+  padding: 10px;
+}
+.property-filter-container form button[type="submit"]{
+  width: 12%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #807f85;
+  color: #1c1c1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.property-filter-container form button[type="submit"]:hover{
+  background-color: #b8860b;
+  border-color: #b8860b;
+  color: #1c1c1e;
+}
+
 @media (min-width: 1200px) and (max-width: 1300px) {
   .header-container .main-navigation .main-menu a {
     font-size: 12px;

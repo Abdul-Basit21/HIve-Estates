@@ -107,7 +107,7 @@ class Property_List_Sale extends \Elementor\Widget_Base
                     $property_cat = get_the_category($property_id);
 ?>
                     <div class="item">
-                        <div class="property-list">
+                        <div class="property-list"> 
                             <!-- <?php if ($property_tags): ?>
                                 <div class="property-tags">
                                     <?php foreach ($property_tags as $tag): ?>

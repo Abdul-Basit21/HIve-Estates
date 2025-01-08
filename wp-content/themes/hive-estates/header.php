@@ -46,7 +46,7 @@
 							?>
 								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 										<?php
-										if (!is_home() && ! is_front_page()) {
+										if (!is_front_page()) {
 										?>
 											<img src="/wp-content/uploads/2024/12/Group-1000004714-2-1.png">
 

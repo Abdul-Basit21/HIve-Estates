@@ -1637,7 +1637,10 @@ section.error-404.not-found .hive-btn {
 .property-detail-container .property-detail-right .property-form {
   position: relative;
 }
-.property-detail-container .property-detail-right .property-form .wpcf7-spinner {
+.property-detail-container
+  .property-detail-right
+  .property-form
+  .wpcf7-spinner {
   position: absolute;
   left: -11px;
   bottom: -61px;
@@ -1696,7 +1699,7 @@ section.error-404.not-found .hive-btn {
   background-color: #b8860b;
   transform: translateY(-50%);
 }
-.property-detail-right .related-properties.property-list{
+.property-detail-right .related-properties.property-list {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
@@ -1706,26 +1709,37 @@ section.error-404.not-found .hive-btn {
   border-radius: 14px;
   margin-top: 20px;
 }
-.property-detail-right .related-properties.property-list .rel-prop-img.property-img-wrapper{
+.property-detail-right
+  .related-properties.property-list
+  .rel-prop-img.property-img-wrapper {
   margin: 0;
   border-radius: 8px;
   flex: 0 0 40%;
 }
-.property-detail-right .related-properties.property-list .rel-prop-img.property-img-wrapper img{
+.property-detail-right
+  .related-properties.property-list
+  .rel-prop-img.property-img-wrapper
+  img {
   width: 130px;
   min-width: 130px;
   min-height: 100px;
   height: 100px !important;
   border-radius: 8px;
 }
-.property-detail-right .related-properties.property-list .rel-prop-info{
+.property-detail-right .related-properties.property-list .rel-prop-info {
   display: flex;
   flex-direction: column;
 }
-.property-detail-right .related-properties.property-list .rel-prop-info .property-price{
+.property-detail-right
+  .related-properties.property-list
+  .rel-prop-info
+  .property-price {
   margin: 0;
 }
-.property-detail-right .related-properties.property-list .rel-prop-info .property-title {
+.property-detail-right
+  .related-properties.property-list
+  .rel-prop-info
+  .property-title {
   font-size: 17px;
   margin: 0;
   display: -webkit-box;
@@ -1733,7 +1747,10 @@ section.error-404.not-found .hive-btn {
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
-.property-detail-right .related-properties.property-list .rel-prop-info .property-address{
+.property-detail-right
+  .related-properties.property-list
+  .rel-prop-info
+  .property-address {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   overflow: hidden;
@@ -1876,21 +1893,57 @@ section.error-404.not-found .hive-btn {
   padding-bottom: 10px;
   border-bottom: 1px solid #807f8550;
 }
-.related-posts div.related-posts-list{
+.related-posts div.related-posts-list {
   display: flex;
   gap: 10px;
   margin-top: 36px;
 }
-.related-posts div.related-posts-list .related-post{
+.related-posts div.related-posts-list .related-post {
   width: 33.33%;
 }
-.related-posts div.related-posts-list .related-post h4{
+.related-posts div.related-posts-list .related-post h4 {
   font-size: 20px;
   min-height: 50px;
 }
-.related-posts div.related-posts-list .related-post img{
+.related-posts div.related-posts-list .related-post img {
   min-height: 250px;
 }
+
+/* ------------ Blog Page Page ------------  */
+.blog-posts-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+.blog-posts-container .pagination .page,
+.blog-posts-container .pagination .page-numbers:not(.next) {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #1c1c1e;
+  color: #1c1c1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.blog-posts-container .pagination .page-numbers.next {
+  color: #111;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.blog-posts-container .pagination .page:hover,
+.blog-posts-container .pagination .page-numbers:not(.next):hover {
+  color: #111;
+  background-color: #b8860b;
+  border-color: #b8860b;
+}
+
 @media (min-width: 1200px) and (max-width: 1300px) {
   .header-container .main-navigation .main-menu a {
     font-size: 12px;
@@ -1901,7 +1954,7 @@ section.error-404.not-found .hive-btn {
   .header-container .header-right-wrapper .icon i {
     font-size: 32px;
   }
-  .header-container .header-right-wrapper .footer-right-info span { 
+  .header-container .header-right-wrapper .footer-right-info span {
     font-size: 14px;
   }
   .header-container .header-right-wrapper .footer-right-info a {

@@ -156,22 +156,24 @@
 
                         if ($related_properties_query->have_posts()) {
                             while ($related_properties_query->have_posts()) {
-                                echo '<div class="related-properties">';
+                                echo '<div class="related-properties property-list">';
                                 $related_properties_query->the_post();
                     ?>
-                                <div class="rel-prop-img">
-                                    <?php echo get_the_post_thumbnail(); ?>
+                                <div class="rel-prop-img property-img-wrapper hover-img-efftect">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php echo get_the_post_thumbnail(); ?>
+                                    </a>
                                 </div>
                                 <div class="rel-prop-info">
                                     <span class="property-price">$<?= get_field('property_price', $property_id); ?></span>
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                    <p>
+                                    <a class="property-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <p class="property-address">
                                         <i class="fa-solid fa-location-arrow"></i>
                                         <span class="prop-detail-location"><?= get_field('address', $property_id); ?></span>
                                     </p>
                                 </div>
                     <?php
-                            echo '</div>';
+                                echo '</div>';
                             }
                         }
                         // Restore original post data

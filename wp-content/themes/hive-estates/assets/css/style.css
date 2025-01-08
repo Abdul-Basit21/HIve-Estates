@@ -1634,6 +1634,16 @@ section.error-404.not-found .hive-btn {
   border-radius: 8px;
   padding: 12px;
 }
+.property-detail-container .property-detail-right .property-form {
+  position: relative;
+}
+.property-detail-container .property-detail-right .property-form .wpcf7-spinner {
+  position: absolute;
+  left: -11px;
+  bottom: -61px;
+  z-index: 99999;
+  top: auto;
+}
 .property-detail-container
   .property-detail-right
   .property-form
@@ -1686,22 +1696,48 @@ section.error-404.not-found .hive-btn {
   background-color: #b8860b;
   transform: translateY(-50%);
 }
-.property-detail-right .related-properties{
+.property-detail-right .related-properties.property-list{
   display: flex;
   align-items: center;
   margin-bottom: 12px;
   gap: 10px;
+  box-shadow: none;
+  border: 1px solid #807f85;
+  border-radius: 14px;
+  margin-top: 20px;
 }
-.property-detail-right .related-properties .rel-prop-img img{
+.property-detail-right .related-properties.property-list .rel-prop-img.property-img-wrapper{
+  margin: 0;
+  border-radius: 8px;
+  flex: 0 0 40%;
+}
+.property-detail-right .related-properties.property-list .rel-prop-img.property-img-wrapper img{
   width: 130px;
   min-width: 130px;
-  height: 100px;
+  min-height: 100px;
+  height: 100px !important;
   border-radius: 8px;
 }
-.property-detail-right .related-properties .rel-prop-info{
+.property-detail-right .related-properties.property-list .rel-prop-info{
   display: flex;
   flex-direction: column;
-  
+}
+.property-detail-right .related-properties.property-list .rel-prop-info .property-price{
+  margin: 0;
+}
+.property-detail-right .related-properties.property-list .rel-prop-info .property-title {
+  font-size: 17px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.property-detail-right .related-properties.property-list .rel-prop-info .property-address{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 /* ------------ Blog Detail Page ------------  */
 .blog-detail {

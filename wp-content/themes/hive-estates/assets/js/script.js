@@ -5,7 +5,12 @@ $(document).ready(function () {
     $('.sidebar-close').on('click', function () {
         $(this).parent('.sidebar-wrapper').removeClass('active');
     })
-
+    $('header .left-menu-header i').on('click', function(){
+        $('header .header-center-div').addClass('mob-menu-active');
+    })
+    $('.header-center-div i.menu-close').on('click', function(){
+        $('header .header-center-div').removeClass('mob-menu-active');
+    })
 
     var owl = $(".aminity-slider");
     owl.owlCarousel({

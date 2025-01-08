@@ -34,7 +34,7 @@
 		<header id="masthead" class="site-header container-fluid header-main">
 			<div class="container header-container">
 				<div class="row align-items-center">
-					<div class="col-2">
+					<div class="col-12 col-md-2 col-lg-2 left-menu-header">
 						<div class="site-branding">
 							<?php
 							the_custom_logo();
@@ -67,8 +67,10 @@
 															?></p>
 							<?php endif; ?>
 						</div>
+						<i class="ri-menu-3-line"></i>
 					</div>
 					<div class="col-7 header-center-div">
+						<i class="ri-close-fill d-md-none d-block menu-close"></i>
 						<nav id="site-navigation" class="main-navigation">
 							<?php
 							wp_nav_menu(
@@ -122,7 +124,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-3 col-lg-3">
+					<div class="col-3 col-lg-3 right-header">
 						<div class="header-right-wrapper">
 							<div class="icon">
 								<i class="ri-customer-service-2-line"></i>

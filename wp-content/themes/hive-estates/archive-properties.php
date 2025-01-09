@@ -67,7 +67,7 @@ get_header();
             </form>
         </div>
         <!-- Properties List -->
-        <div class="properties-list row mb-5">
+        <div class="properties-list row mb-5 px-2 px-md-0">
             <?php
             // Initialize variables
             $search_query = isset($_GET['property_search']) ? sanitize_text_field($_GET['property_search']) : '';
@@ -142,7 +142,7 @@ get_header();
                     $property_cat = get_the_category($property_id);
             ?>
                     <div class="col-12 col-md-6 col-lg-4 mt-4">
-                        <div class="property-list">
+                        <div class="property-list ">
                             <!-- <?php if ($property_tags): ?>
                                 <div class="property-tags">
                                     <?php foreach ($property_tags as $tag): ?>

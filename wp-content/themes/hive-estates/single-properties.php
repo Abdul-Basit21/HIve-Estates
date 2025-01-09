@@ -15,7 +15,7 @@
 </div>
 <div class="container property-detail-container">
     <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-md-6 col-lg-9">
             <div class="property-info-top">
                 <div class="info-top-left">
                     <div class="tags-wrapper">
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-3 col-md-6">
             <div class="property-detail-right">
                 <div class="cont-form">
                     <h2>Contact the listing owner</h2>

@@ -2094,6 +2094,17 @@ section.error-404.not-found .hive-btn {
     border-radius: 50%;
     cursor: pointer;
   }
+  .inner-banner .inner-banner-wrapper h1.inner-title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .inner-banner .inner-banner-wrapper .breadcrumbs > span {
+    justify-content: center;
+  }
+  .inner-banner .inner-banner-wrapper .breadcrumbs > span span,
+  .inner-banner .inner-banner-wrapper .breadcrumbs > span a {
+    font-size: 14px;
+  }
   .property-list .property-img-wrapper {
     margin-bottom: 12px;
   }
@@ -2117,7 +2128,7 @@ section.error-404.not-found .hive-btn {
     text-align: center;
   }
   .site-footer .footer-main {
-    padding: 40px 10px;
+    padding: 40px 20px;
   }
   .site-footer .footer-main .footer-first-col .footer-social-links {
     margin-top: 20px;
@@ -2138,6 +2149,55 @@ section.error-404.not-found .hive-btn {
   .property-filter-container form input[type="text"],
   .property-filter-container form select,
   .property-filter-container form button[type="submit"] {
+    width: 100%;
+  }
+  .property-detail-container .property-info-top {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .property-detail-container .property-info-top .info-top-right {
+    align-items: flex-start;
+  }
+  .property-detail-gallery #big .owl-item img {
+    max-height: 320px;
+    min-height: 320px;
+  }
+  .property-detail-container .property-overview .overview-main {
+    height: auto;
+    padding: 20px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .property-detail-container
+    .property-overview
+    .overview-main
+    span:not(:last-child) {
+    border: none;
+  }
+  .property-detail-container .property-overview .overview-main span.prop-icon {
+    flex: 0 0 47%;
+  }
+  .properties-amenities-wrapper.property-overview ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .property-detail-container .property-overview h2 {
+    font-size: 22px;
+  }
+  .property-detail-right
+    .related-properties.property-list
+    .rel-prop-img.property-img-wrapper
+    img {
+    min-height: 100px !important;
+    max-height: 100px !important;
+  }
+  .blog-detail .blog-img-feature .post-meta .post-date, .blog-detail .blog-img-feature .post-meta .post-categories{
+    font-size: 16px;
+  }
+  .property-detail-container .property-info-top .info-top-left h2{
+    font-size: 30px;
+  }
+  .related-posts div.related-posts-list .related-post{
     width: 100%;
   }
 }

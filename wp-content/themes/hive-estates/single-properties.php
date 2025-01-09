@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="container property-detail-container">
-    <div class="row">
+    <div class="row px-4 px-md-0">
         <div class="col-12 col-md-6 col-lg-9">
             <div class="property-info-top">
                 <div class="info-top-left">

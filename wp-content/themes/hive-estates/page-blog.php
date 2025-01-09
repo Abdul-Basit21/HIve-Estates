@@ -17,7 +17,7 @@ get_header();
         </div>
     </div>
     <div class="container">
-        <div class="blog-posts row mt-4 mb-5">
+        <div class="blog-posts row mt-4 mb-5 px-4 px-md-0">
             <?php
             // Set up pagination
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

@@ -88,7 +88,7 @@ $(document).ready(function () {
     bigimage
         .owlCarousel({
             items: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2000,
             nav: false,
             dots: false,
@@ -111,7 +111,18 @@ $(document).ready(function () {
             margin: 12,
             autoplay: false,
             slideBy: 1,
-            responsiveRefreshRate: 100
+            responsiveRefreshRate: 100,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
         })
         .on("changed.owl.carousel", syncPosition2);
 

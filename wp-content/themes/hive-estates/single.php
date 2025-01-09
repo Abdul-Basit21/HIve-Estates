@@ -27,7 +27,7 @@ get_header();
 	</div>
 
 	<div class="container blog-detail property-detail-container">
-		<div class="row">
+		<div class="row px-4 px-md-0">
 			<div class="col-12 col-md-12 col-lg-9">
 
 				<div class="blog-img-feature">
@@ -114,8 +114,8 @@ get_header();
 
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-9">
+		<div class="row px-4 px-md-0">
+			<div class="col-12 col-md-9">
 				<div class="related-posts">
 					<?php cc_related_posts(); ?>
 				</div>

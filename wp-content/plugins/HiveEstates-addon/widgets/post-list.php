@@ -95,7 +95,7 @@ class Post_List extends \Elementor\Widget_Base
                     $post_categories = get_the_category($post_id); // Get categories
                     $post_tags = get_the_tags($post_id); // Get tags
                 ?>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-3">
                         <div class="blog-post-item property-list">
                             <div class="post-thumbnail property-img-wrapper hover-img-efftect">
                                 <a href="<?php echo get_permalink($post_id); ?>">

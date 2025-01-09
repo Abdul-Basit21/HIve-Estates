@@ -1,14 +1,22 @@
 $(document).ready(function () {
-    $('.sider-bar-open').on('click', function () {
-        $('.sidebar-wrapper').addClass('active');
-    })
-    $('.sidebar-close').on('click', function () {
-        $(this).parent('.sidebar-wrapper').removeClass('active');
-    })
-    $('header .left-menu-header i').on('click', function(){
+    $(function () {
+        $('.sider-bar-open').on('click', function () {
+            $('.sidebar-wrapper').toggleClass('active');
+        })
+        $('.sidebar-close').on('click', function () {
+            $(this).parent('.sidebar-wrapper').removeClass('active');
+        })
+        $(document).on("click", function (e) {
+            if ($(e.target).is(".sider-bar-open, .sidebar-wrapper, .sidebar-wrapper *") === false) {
+                $(".sidebar-wrapper").removeClass("active");
+            }
+        });
+    });
+
+    $('header .left-menu-header i').on('click', function () {
         $('header .header-center-div').addClass('mob-menu-active');
     })
-    $('.header-center-div i.menu-close').on('click', function(){
+    $('.header-center-div i.menu-close').on('click', function () {
         $('header .header-center-div').removeClass('mob-menu-active');
     })
 
@@ -21,7 +29,18 @@ $(document).ready(function () {
         loop: true,
         nav: true,
         navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 1.5,
+            },
+            600: {
+                items: 3.5,
+            },
+            1000: {
+                items: 5.5,
+            }
+        }
     });
 
     var owl = $(".property_sale_carousel");
@@ -33,7 +52,18 @@ $(document).ready(function () {
         loop: true,
         nav: true,
         navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 1.2,
+            },
+            600: {
+                items: 2.2,
+            },
+            1000: {
+                items: 3.5,
+            }
+        }
     });
 
 

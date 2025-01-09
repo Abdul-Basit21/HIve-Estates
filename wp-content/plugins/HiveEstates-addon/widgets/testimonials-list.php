@@ -141,7 +141,7 @@ class Testimonials_List_Widget extends \Elementor\Widget_Base
                 <?php
                 foreach ($client_testimonials as $testimonials) {
                 ?>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 mb-3 mb-md-0">
                         <div class="tesmonial-item ">
                             <i class="ri-double-quotes-r testimonials-quote"></i>
                             <div class="tesmonial-img-wrapper">

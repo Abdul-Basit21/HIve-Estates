@@ -113,7 +113,7 @@ class Country_List_Widget extends \Elementor\Widget_Base
                 <?php
                 foreach ($countries as $country) {
                 ?>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="country-item">
                             <img src="<?php echo $country['country_BG_Image']['url'] ?>" alt="">
                             <h2 class="country-name"><?php echo $country['country_name']; ?></h2>

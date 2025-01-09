@@ -19,12 +19,12 @@
 			<div class="container-fluid newsletter-wrapper">
 				<div class="container">
 					<v class="row">
-						<div class="col-7 d-flex align-items-center">
+						<div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
 							<h4 class="newsletter-title">
 								Newsletter To Get Updated The Latest News
 							</h4>
 						</div>
-						<div class="col-5">
+						<div class="col-lg-5 col-md-5 col-12">
 							<?php echo do_shortcode('[contact-form-7 id="c90925f" title="newsletter-form"]'); ?>
 						</div>
 					</v>
@@ -114,7 +114,7 @@
 		<div class="container-fuid footer-copyright">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 col-md-6 d-flex align-items-center">
+					<div class="col-lg-6 col-12 col-md-6 d-flex align-items-center">
 						<p class="copyright-text">
 							Copyright &copy; 2024 Hive Estates, All rights reserved.
 						</p>
@@ -122,7 +122,7 @@
 					<?php
 					if (!is_home() && ! is_front_page()) {
 					?>
-						<div class="col-6 col-md-6">
+						<div class="col-lg-6 col-12 col-md-6">
 							<div class="footer-social-links">
 								<?php
 								$social_links = get_field('footer_social_links', 'option');

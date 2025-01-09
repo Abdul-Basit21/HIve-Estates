@@ -123,7 +123,7 @@ class Why_Choose_Us_Widget extends \Elementor\Widget_Base
                 <?php
                 foreach ($choose_sec as $choose) {
                 ?>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 mb-3 mb-md-0">
                         <div class="choose-item property-list">
                             <div class="property-img-wrapper">
                                 <img src="<?php echo $choose['choose_image']['url'] ?>" alt="">

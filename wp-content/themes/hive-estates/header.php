@@ -67,7 +67,7 @@
 															?></p>
 							<?php endif; ?>
 						</div>
-						<i class="ri-menu-3-line"></i>
+						<i class="ri-menu-3-line d-md-none d-block"></i>
 					</div>
 					<div class="col-7 header-center-div">
 						<i class="ri-close-fill d-md-none d-block menu-close"></i>

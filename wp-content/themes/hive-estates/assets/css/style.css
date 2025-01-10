@@ -81,6 +81,21 @@
   transform: translateX(0);
   transition: transform 450ms 460ms ease;
 }
+.home-v2-banner-info > div {
+  background-color: rgba(248, 248, 248, 0.2);
+  padding: 48px 24px;
+  border-radius: 24px;
+  backdrop-filter: blur(3px);
+}
+.home-banner-phone-icon span.elementor-button-text::before {
+  content: "\efe9";
+  font-family: "remixicon";
+  font-size: 26px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* ------------ Header Center column ------------  */
 .header-container .row,
 .header-container .row > div {
@@ -341,6 +356,35 @@ span.dot {
   height: 14px;
   background-color: #b8860b;
   display: inline-block;
+}
+.aminities-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+}
+.aminities-main .aminity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 220px;
+  height: 100%;
+  max-height: 220px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 0 10px;
+  flex-direction: column;
+  padding: 24px;
+}
+.aminities-main .aminity h2 {
+  color: #1c1c1e;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans";
+  position: relative;
+  transition: all 0.2s ease;
 }
 /* ------------ Aminity Slider Styling ------------  */
 .aminity-slider .owl-stage-outer,
@@ -2191,13 +2235,14 @@ section.error-404.not-found .hive-btn {
     min-height: 100px !important;
     max-height: 100px !important;
   }
-  .blog-detail .blog-img-feature .post-meta .post-date, .blog-detail .blog-img-feature .post-meta .post-categories{
+  .blog-detail .blog-img-feature .post-meta .post-date,
+  .blog-detail .blog-img-feature .post-meta .post-categories {
     font-size: 16px;
   }
-  .property-detail-container .property-info-top .info-top-left h2{
+  .property-detail-container .property-info-top .info-top-left h2 {
     font-size: 30px;
   }
-  .related-posts div.related-posts-list .related-post{
+  .related-posts div.related-posts-list .related-post {
     width: 100%;
   }
 }

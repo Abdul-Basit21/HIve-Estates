@@ -27,6 +27,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'hive-estates'); ?></a>
@@ -45,11 +46,14 @@
 							else :
 							?>
 								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-										<?php
-										if (!is_front_page()) {
-										?>
-											<img src="/wp-content/uploads/2024/12/Group-1000004714-2-1.png">
 
+										<?php
+										global $wp_query;
+										$home_v2 = $wp_query->post->ID;
+										
+										if (!is_front_page() && $home_v2 !='1047') {
+										?>
+											<img src="<?= get_field('sticky_header_logo', 'option'); ?>">
 										<?php
 										} else {
 										?>

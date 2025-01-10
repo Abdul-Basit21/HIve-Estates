@@ -199,6 +199,16 @@ gsap.from('.gallery-masonry-wrapper div', {
         scroller: 'body',
     }
 });
+gsap.from('.aminities-main div', {
+    y: -10,
+    delay: 0.5,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: '.aminities-container',
+        scroller: 'body',
+    }
+});
 gsap.from('.hive-accordion div.accordion-item', {
     x: -20,
     delay: 0.5,

@@ -16,7 +16,7 @@ class Aminities_Widget extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-slider-album';
+        return 'eicon-container-grid';
     }
 
     public function get_categories()

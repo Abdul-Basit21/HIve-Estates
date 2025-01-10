@@ -144,6 +144,10 @@ class Property_List extends \Elementor\Widget_Base
                                         <?php endforeach; ?>
                                     </div>
                                 <?php endif; ?>
+                                <div class="hive-btn">
+                                    <a href="<?php echo get_permalink($property_id); ?>" class="property-list-btn"><span>View Property</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

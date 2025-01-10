@@ -496,7 +496,6 @@ span.dot {
   color: #fff !important;
 }
 
-
 .property_list_grid .property-list-item {
   display: flex;
   gap: 16px;
@@ -506,34 +505,53 @@ span.dot {
   border: 1px solid #807f85;
 }
 
-.property_list_grid .property-list-item  .property-img-wrapper{
+.property_list_grid .property-list-item .property-img-wrapper {
   margin: 0;
 }
-.property_list_grid .property-list-item.property-list a.property-title{
+.property_list_grid .property-list-item.property-list a.property-title {
   margin-bottom: 0px;
 }
-.property_list_grid .property-list-item.property-list span.property-price{
+.property_list_grid .property-list-item.property-list span.property-price {
+  margin-bottom: 0px;
+}
+.property-list.property-list-item span.prop-icon {
   margin-bottom: 10px;
 }
-.property-list.property-list-item span.prop-icon{
-  margin-bottom: 14px;
-}
-.property_list_grid .property-list-item img{
-  min-height: 300px;
-  max-height: 300px;
+.property_list_grid .property-list-item img {
+  min-height: 320px !important;
+  max-height: 320px !important;
   height: 100%;
   object-fit: cover;
   width: unset !important;
   min-width: unset !important;
   max-width: unset !important;
 }
-.property_list_grid .property-list-item .property-list-right{
+.property_list_grid .property-list-item .property-list-right {
   display: flex;
   flex-direction: column;
   gap: 5px;
   flex: 0 0 50%;
 }
-
+.property_list_grid
+  .property-list-item
+  .property-list-right
+  a.property-list-btn {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: none;
+  background-color: #b8860b;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", Sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding: 0;
+}
 /* ------------ Property Sale / Rent Listing Styling ------------  */
 .property-list {
   background-color: #fff;

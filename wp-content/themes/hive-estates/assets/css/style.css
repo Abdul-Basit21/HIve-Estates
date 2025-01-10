@@ -369,7 +369,7 @@ span.dot {
   min-height: 220px;
   height: 100%;
   max-height: 220px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  box-shadow: rgba(17, 17, 26, 0.17) 0px 0px 16px;
   background-color: #fff;
   border-radius: 12px;
   margin: 0 10px;
@@ -386,6 +386,17 @@ span.dot {
   position: relative;
   transition: all 0.2s ease;
 }
+.aminities-main .aminity h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 85px;
+  background-color: #b8860b;
+  top: -97px;
+  transform: translateX(-50%);
+}
+
 /* ------------ Aminity Slider Styling ------------  */
 .aminity-slider .owl-stage-outer,
 .property_sale_carousel .owl-stage-outer {

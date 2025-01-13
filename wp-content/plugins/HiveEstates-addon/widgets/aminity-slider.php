@@ -120,7 +120,7 @@ class Aminity_Slider_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
         $sliders = $settings['sliders'];
 ?>
-        <div class="container">
+        <div class="container"> 
             <div class="owl-carousel aminity-slider owl-theme">
                 <?php
                 foreach ($sliders as $slider) {

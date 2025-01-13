@@ -1271,6 +1271,54 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   font-size: 16px;
   margin-right: 4px;
 }
+.tesmonial-container .testimonial-slider-item {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  align-items: start;
+  padding: 0;
+}
+.tesmonial-container .testimonial-slider-item .client-review {
+  text-align: left;
+  font-size: 20px;
+  color: #1c1c1e;
+  line-height: 32px;
+  letter-spacing: 0.85px;
+  margin: 30px 0;
+}
+.tesmonial-container .testimonial-slider-item .review-stars i {
+  color: #fea41c;
+  font-size: 20px;
+  margin-right: 4px;
+}
+.tesmonial-container .testimonial-slider-item .testimonial-slider-info-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-top: 20px;
+}
+.tesmonial-container .testimonial-slider-item .client-name {
+  margin-bottom: 0px;
+}
+.tesmonial-container
+  .testimonial-slider-item
+  .testimonial-slider-info-wrap
+  .client-designation {
+  color: #807f85;
+  font-size: 17px;
+  font-weight: 500;
+}
+.tesmonial-container .testimonial-slider-item i.testimonials-quote {
+  color: #EFEFEF;
+  font-size: 72px;
+  position: absolute;
+  bottom: 20px;
+  transform: none;
+  right: 70px;
+  left: unset;
+  top: unset;
+}
 .contact-form-main .inline-fields {
   display: flex;
   justify-content: space-between;
@@ -1474,20 +1522,20 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   transition: all 0.4s ease;
   object-fit: cover;
 }
-.pakery-gallery-wrapper .pakery-item{
+.pakery-gallery-wrapper .pakery-item {
   height: 300px;
   border-radius: 12px;
   margin-bottom: 16px;
 }
-.pakery-gallery-wrapper .pakery-item::before{
-background-color: rgba(0,0,0,0.45);
+.pakery-gallery-wrapper .pakery-item::before {
+  background-color: rgba(0, 0, 0, 0.45);
 }
-.pakery-gallery-wrapper .pakery-item .country-name{
-left: 30px;
-transform: none;
-top: auto;
-bottom: 30px;
-font-size: 24px;
+.pakery-gallery-wrapper .pakery-item .country-name {
+  left: 30px;
+  transform: none;
+  top: auto;
+  bottom: 30px;
+  font-size: 24px;
 }
 section.error-404.not-found {
   padding: 150px 0;

@@ -748,7 +748,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
 .country-list-container .country-item img {
   width: 100%;
   height: 100%;
-  border-radius: 40px;
+  border-radius: inherit;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -761,7 +761,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
   z-index: 4;
-  border-radius: 40px;
+  border-radius: inherit;
 }
 .country-item .country-name {
   text-align: center;
@@ -1473,6 +1473,21 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   border-radius: inherit;
   transition: all 0.4s ease;
   object-fit: cover;
+}
+.pakery-gallery-wrapper .pakery-item{
+  height: 300px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.pakery-gallery-wrapper .pakery-item::before{
+background-color: rgba(0,0,0,0.45);
+}
+.pakery-gallery-wrapper .pakery-item .country-name{
+left: 30px;
+transform: none;
+top: auto;
+bottom: 30px;
+font-size: 24px;
 }
 section.error-404.not-found {
   padding: 150px 0;

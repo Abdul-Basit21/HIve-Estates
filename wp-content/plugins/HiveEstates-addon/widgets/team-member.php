@@ -188,7 +188,7 @@ class Our_Team_Widget extends \Elementor\Widget_Base
                 <?php
                 foreach ($team_member as $member) {
                 ?>
-                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0">
                         <div class="team-item ">
                             <div class="team-img-wrapper">
                                 <img src="<?php echo $member['image']['url'] ?>" alt="">

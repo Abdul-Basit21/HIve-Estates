@@ -1310,7 +1310,7 @@ span.prop-icon.category.prop-footer .prop-cat-name {
   font-weight: 500;
 }
 .tesmonial-container .testimonial-slider-item i.testimonials-quote {
-  color: #EFEFEF;
+  color: #efefef;
   font-size: 72px;
   position: absolute;
   bottom: 20px;
@@ -2058,6 +2058,29 @@ section.error-404.not-found .hive-btn {
   letter-spacing: 0.5px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
+.blog-detail blockquote {
+  padding: 12px 12px 30px 12px;
+  border-radius: 12px;
+  background-color: #b8860b;
+  position: relative;
+}
+.blog-detail blockquote p {
+  color: #fff !important;
+  margin: 0;
+  font-family: "Plus Jakarta Sans" !important;
+  font-size: 18px !important;
+  line-height: 36px !important;
+  letter-spacing: 0.5px;
+}
+.blog-detail blockquote:not(:last-child)::after {
+  content: "\ec52";
+  font-family: "remixicon";
+  font-size: 26px;
+  position: absolute;
+  right: 60px;
+  bottom: 30px;
+  color: #ffffff60;
+}
 .related-posts h3.widget-title {
   font-size: 38px;
   font-family: "Plus Jakarta Sans";
@@ -2182,7 +2205,63 @@ section.error-404.not-found .hive-btn {
     max-width: 1120px !important;
   }
 }
+
 @media (min-width: 769px) and (max-width: 1190px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 790px;
+  }
+  .container-fluid.header-main {
+    height: 80px;
+  }
+  .header-container .main-navigation .main-menu li {
+    height: 80px;
+  }
+  #sidebar-wrapper.sidebar-wrapper {
+    padding: 50px;
+    width: 40%;
+    right: -40%;
+  }
+  .sidebar-wrapper > i {
+    top: 50px;
+    right: 50px;
+    font-size: 36px;
+  }
+  .header-container .header-right-wrapper .footer-right-info span {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .header-container .header-right-wrapper .footer-right-info a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .header-container .header-right-wrapper .icon i {
+    font-size: 34px;
+  }
+  .header-container .header-center-div i.sider-bar-open {
+    font-size: 24px;
+  }
+  .header-container .main-navigation .main-menu {
+    gap: 30px;
+  }
+  .header-container .main-navigation .main-menu a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .header-container .header-center-div {
+    gap: 10px;
+  }
+  .header-container
+    .main-navigation
+    .main-menu
+    li.menu-item-has-children::after {
+    font-size: 12px;
+    right: -15px;
+  }
+  .header-container .header-right-wrapper {
+    gap: 5px;
+  }
 }
 @media only screen and (max-width: 768px) {
   header.container-fluid.header-main {
@@ -2279,6 +2358,22 @@ section.error-404.not-found .hive-btn {
   .inner-banner .inner-banner-wrapper .breadcrumbs > span span,
   .inner-banner .inner-banner-wrapper .breadcrumbs > span a {
     font-size: 14px;
+  }
+  .aminities-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aminities-main .aminity {
+    min-height: 250px;
+    max-height: 250px;
+  }
+  .property_list_grid .property-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .property_list_grid .property-list-item .property-img-wrapper,
+  .property_list_grid .property-list-item .property-img-wrapper img {
+    width: 100%;
   }
   .property-list .property-img-wrapper {
     margin-bottom: 12px;

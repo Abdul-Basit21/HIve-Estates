@@ -116,7 +116,7 @@
 				<div class="row">
 					<div class="col-lg-6 col-12 col-md-6 d-flex align-items-center">
 						<p class="copyright-text">
-							Copyright &copy; 2024 Hive Estates, All rights reserved.
+							<?php echo get_field('footer_copyright_text', 'option'); ?>
 						</p>
 					</div>
 					<?php

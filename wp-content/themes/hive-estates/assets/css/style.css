@@ -2108,7 +2108,8 @@ section.error-404.not-found .hive-btn {
 }
 
 /* ------------ Blog Page Page ------------  */
-.blog-posts-container .pagination {
+.blog-posts-container .pagination,
+.properties-list .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2116,7 +2117,8 @@ section.error-404.not-found .hive-btn {
   margin-top: 40px;
 }
 .blog-posts-container .pagination .page,
-.blog-posts-container .pagination .page-numbers:not(.next) {
+.blog-posts-container .pagination .page-numbers:not(.next),
+.properties-list .pagination .page-numbers {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -2128,7 +2130,8 @@ section.error-404.not-found .hive-btn {
   transition: all 0.5s ease;
   text-decoration: none;
 }
-.blog-posts-container .pagination .page-numbers.next {
+.blog-posts-container .pagination .page-numbers.next ,
+.properties-list .pagination .page-numbers {
   color: #111;
   font-family: "Plus Jakarta Sans";
   font-weight: 500;
@@ -2136,7 +2139,8 @@ section.error-404.not-found .hive-btn {
   letter-spacing: 0.5px;
 }
 .blog-posts-container .pagination .page:hover,
-.blog-posts-container .pagination .page-numbers:not(.next):hover {
+.blog-posts-container .pagination .page-numbers:not(.next):hover,
+.properties-list .pagination .page-numbers:hover {
   color: #111;
   background-color: #b8860b;
   border-color: #b8860b;
@@ -2470,5 +2474,9 @@ section.error-404.not-found .hive-btn {
   }
   .related-posts div.related-posts-list .related-post {
     width: 100%;
+  }
+  .footer-copyright .footer-social-links {
+    margin-top: 20px;
+    justify-content: flex-start;
   }
 }

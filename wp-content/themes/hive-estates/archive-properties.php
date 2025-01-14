@@ -119,10 +119,11 @@ get_header();
                 }
             }
 
+
             // Build the WP_Query args
             $args = array(
                 'post_type'      => 'properties',
-                'posts_per_page' => 6,
+                'posts_per_page' => 10,
                 'paged'          => $paged,
                 's'              => $search_query, // This integrates the search field into the query
                 'tax_query'      => !empty($tax_query) ? $tax_query : array(),
@@ -132,7 +133,7 @@ get_header();
             );
 
             // Run the query
-            $properties_query = new WP_Query($args);
+            $properties_query = new WP_Query(query: $args);
 
             if ($properties_query->have_posts()) :
                 while ($properties_query->have_posts()) :
@@ -195,6 +196,8 @@ get_header();
                 echo paginate_links(array(
                     'total'   => $properties_query->max_num_pages,
                     'current' => $paged,
+                    'prev_text' => '&laquo; Previous',
+                    'next_text' => 'Next &raquo;',
                 ));
                 echo '</div>';
             else :

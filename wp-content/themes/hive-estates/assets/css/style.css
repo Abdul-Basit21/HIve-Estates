@@ -82,9 +82,9 @@
   transition: transform 450ms 460ms ease;
 }
 .home-v3-counter .elementor-counter-number-wrapper {
-  flex: 0 !important; 
+  flex: 0 !important;
 }
-.home-v3-counter .elementor-counter{
+.home-v3-counter .elementor-counter {
   align-items: center;
   gap: 20px;
 }
@@ -502,7 +502,59 @@ span.dot {
 .owl-nav button:hover i {
   color: #fff !important;
 }
-
+.facilities-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+  padding-top: 40px;
+  counter-reset: facility-list-item;
+}
+.facilities-container .facility-list-item {
+  padding-left: 40px;
+  position: relative;
+  counter-increment: facility-list-item;
+}
+.facilities-container .facility-list-item::before {
+  content: counter(facility-list-item);
+  color: #333;
+  font-size: 18px;
+  position: absolute;
+  left: -10px;
+  top: -3px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: 1px solid #b8860b;
+}
+.facility-list-item::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  height: 150%;
+  width: 1px;
+  background-color: #807f8550;
+  z-index: 0;
+}
+.facilities-container .facility-list-item .f-list-heading {
+  font-family: "Plus Jakarta Sans";
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.facilities-container .facility-list-item .f-list-para {
+  width: 80%;
+  font-family: "Quicksand";
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+}
 .property_list_grid .property-list-item {
   display: flex;
   gap: 16px;
@@ -2137,7 +2189,7 @@ section.error-404.not-found .hive-btn {
   transition: all 0.5s ease;
   text-decoration: none;
 }
-.blog-posts-container .pagination .page-numbers.next ,
+.blog-posts-container .pagination .page-numbers.next,
 .properties-list .pagination .page-numbers {
   color: #111;
   font-family: "Plus Jakarta Sans";

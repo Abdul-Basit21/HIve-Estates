@@ -259,6 +259,7 @@ final class HiveEstates_Addon_Extension {
 		require_once( __DIR__ . '/widgets/property-list.php' );
 		require_once( __DIR__ . '/widgets/country-list-packery.php' );
 		require_once( __DIR__ . '/widgets/hive-testimonials-slider.php' );
+		require_once( __DIR__ . '/widgets/hive-facilities-list.php' );
 
 		// added by EWA - EWA own Register widgets, loading all widget names
 
@@ -276,6 +277,7 @@ final class HiveEstates_Addon_Extension {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Property_List() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Country_Packery_List_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hive_Testimonials_Slider_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hive_Facilities_List_Widget() );
 	}
 
 	/**

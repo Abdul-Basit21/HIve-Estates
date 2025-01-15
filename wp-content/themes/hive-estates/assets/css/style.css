@@ -81,6 +81,13 @@
   transform: translateX(0);
   transition: transform 450ms 460ms ease;
 }
+.home-v3-counter .elementor-counter-number-wrapper {
+  flex: 0 !important; 
+}
+.home-v3-counter .elementor-counter{
+  align-items: center;
+  gap: 20px;
+}
 .home-v2-banner-info > div {
   background-color: rgba(248, 248, 248, 0.2);
   padding: 48px 24px;
@@ -2478,5 +2485,6 @@ section.error-404.not-found .hive-btn {
   .footer-copyright .footer-social-links {
     margin-top: 20px;
     justify-content: flex-start;
+    color: #b8860b;
   }
 }

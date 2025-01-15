@@ -50,13 +50,15 @@
 										<?php
 										global $wp_query;
 										$home_v2 = $wp_query->post->ID;
-										
-										if (!is_front_page() && $home_v2 !='1047') {
+
+										if (!is_front_page() && $home_v2 != '1047' && $home_v2 != '27' || $home_v2 == '1315') {
 										?>
+											<!-- black logo -->
 											<img src="<?= get_field('sticky_header_logo', 'option'); ?>">
 										<?php
 										} else {
 										?>
+											<!-- white logo -->
 											<img src="<?= get_field('header_logo', 'option'); ?>">
 										<?php
 										}

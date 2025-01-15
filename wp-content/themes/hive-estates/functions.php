@@ -292,7 +292,7 @@ function hive_property_init()
 		// 'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
 		// 'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
 		// 'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'hive-estates' ),
-		'archives'              => _x( 'Property archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'hive-estates' ),
+		'archives'              => _x('Property archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'hive-estates'),
 		// 'insert_into_item'      => _x( 'Insert into Property', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'hive-estates' ),
 		// 'uploaded_to_this_item' => _x( 'Uploaded to this Property', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'hive-estates' ),
 		// 'filter_items_list'     => _x( 'Filter Propertys list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'hive-estates' ),
@@ -435,3 +435,112 @@ function cc_related_posts($args = array())
 
 	wp_reset_postdata();
 }
+
+?>
+
+
+
+<?php
+function home_search()
+{
+?>
+	<!-- Search form homepage -->
+	<form method="GET" action="/property" class="home-v3-form-search">
+		<!-- Search -->
+		<input type="text" name="property_search" placeholder="Search properties" value="<?php echo isset($_GET['property_search']) ? esc_attr($_GET['property_search']) : ''; ?>">
+
+		<!-- Tags Filter -->
+		<?php
+		$tags = get_terms(array(
+			'taxonomy' => 'post_tag', // WordPress default tags taxonomy
+			'hide_empty' => true,
+		));
+		?>
+		<select name="property_tag">
+			<option value="">All Tags</option>
+			<?php foreach ($tags as $tag) : ?>
+				<option value="<?php echo esc_attr($tag->slug); ?>" <?php selected(isset($_GET['property_tag']) && $_GET['property_tag'] === $tag->slug); ?>>
+					<?php echo esc_html($tag->name); ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+
+		<!-- Category Filter -->
+		<?php
+		$categories = get_categories(array(
+			'taxonomy' => 'category', // WordPress default categories taxonomy
+			'hide_empty' => true,
+		));
+		?>
+		<select name="property_category">
+			<option value="">All Categories</option>
+			<?php foreach ($categories as $category) : ?>
+				<option value="<?php echo esc_attr($category->slug); ?>" <?php selected(isset($_GET['property_category']) && $_GET['property_category'] === $category->slug); ?>>
+					<?php echo esc_html($category->name); ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+
+		<!-- Price Sorting -->
+		<select name="sort_price">
+			<option value="">Sort by Price</option>
+			<option value="low_to_high" <?php selected(isset($_GET['sort_price']) && $_GET['sort_price'] === 'low_to_high'); ?>>Low to High</option>
+			<option value="high_to_low" <?php selected(isset($_GET['sort_price']) && $_GET['sort_price'] === 'high_to_low'); ?>>High to Low</option>
+		</select>
+
+		<!-- Submit Button -->
+		<button type="submit"><i class="ri-search-line"></i></button>
+	</form>
+<?php
+
+	$search_query = isset($_GET['property_search']) ? sanitize_text_field($_GET['property_search']) : '';
+	$tax_query = array();
+	$meta_query = array();
+	$orderby = 'date';
+	$order = 'DESC';
+
+	// Tax Query for Tags and Categories
+	if (!empty($_GET['property_tag'])) {
+		$tax_query[] = array(
+			'taxonomy' => 'post_tag',
+			'field'    => 'slug',
+			'terms'    => sanitize_text_field($_GET['property_tag']),
+		);
+	}
+
+	if (!empty($_GET['property_category'])) {
+		$tax_query[] = array(
+			'taxonomy' => 'category',
+			'field'    => 'slug',
+			'terms'    => sanitize_text_field($_GET['property_category']),
+		);
+	}
+
+	// If both tag and category filters exist, combine them
+	if (!empty($tax_query)) {
+		$args['tax_query'] = $tax_query;
+	}
+
+	// Meta Query for Sorting by Price
+	if (!empty($_GET['sort_price'])) {
+		if ($_GET['sort_price'] === 'low_to_high') {
+			$orderby = 'meta_value_num';
+			$meta_query[] = array(
+				'key'     => 'property_price',
+				'compare' => 'EXISTS',
+				'type'    => 'NUMERIC',
+			);
+			$order = 'ASC';
+		} elseif ($_GET['sort_price'] === 'high_to_low') {
+			$orderby = 'meta_value_num';
+			$meta_query[] = array(
+				'key'     => 'property_price',
+				'compare' => 'EXISTS',
+				'type'    => 'NUMERIC',
+			);
+			$order = 'DESC';
+		}
+	}
+}
+add_shortcode('homeSearch', 'home_search');
+?>

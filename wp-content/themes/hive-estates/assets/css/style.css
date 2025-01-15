@@ -555,15 +555,77 @@ span.dot {
   font-size: 17px;
   font-weight: 500;
 }
+.country-slider .item {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #807f8550;
+  border-radius: 12px;
+}
+.country-slider .item img {
+  border-radius: 8px;
+  height: 320px;
+  object-fit: cover;
+}
+.country-slider .item h2 {
+  font-size: 22px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
 .property_list_grid .property-list-item {
   display: flex;
   gap: 16px;
   background-color: unset;
   box-shadow: none;
   align-items: center;
-  border: 1px solid #807f85;
+  border: 1px solid #807f8550;
 }
-
+form.home-v3-form-search {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 20px;
+}
+form.home-v3-form-search input,
+form.home-v3-form-search select,
+form.home-v3-form-search button {
+  height: 45px;
+  border: 1px solid #807f8550;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 17px;
+  padding: 8px;
+  color: #333;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+}
+form.home-v3-form-search button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #b8860b;
+  transition: all 0.3s ease;
+}
+form.home-v3-form-search button:hover {
+  background-color: #111;
+}
+form.home-v3-form-search button i {
+  color: #fff;
+  font-size: 20px;
+}
 .property_list_grid .property-list-item .property-img-wrapper {
   margin: 0;
 }
@@ -2325,6 +2387,10 @@ section.error-404.not-found .hive-btn {
   .header-container .header-right-wrapper {
     gap: 5px;
   }
+  .facilities-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 60px;
+  }
 }
 @media only screen and (max-width: 768px) {
   header.container-fluid.header-main {
@@ -2538,5 +2604,28 @@ section.error-404.not-found .hive-btn {
     margin-top: 20px;
     justify-content: flex-start;
     color: #b8860b;
+  }
+  form.home-v3-form-search {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: static;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  form.home-v3-form-search input,
+  form.home-v3-form-search select,
+  form.home-v3-form-search button {
+    width: 100%;
+  }
+  .facilities-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 20px;
   }
 }

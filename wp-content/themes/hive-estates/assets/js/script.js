@@ -88,6 +88,29 @@ $(document).ready(function () {
         }
     });
 
+    var owl = $(".country-slider");
+    owl.owlCarousel({
+        items: 4,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        margin: 10,
+        loop: true,
+        nav: true,
+        navText: ["<i class='ri-arrow-left-line'></i>", "<i class='ri-arrow-right-line'></i>"],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 4,
+            }
+        }
+    });
+
 
     $(".gallery-masonry-item [data-fancybox]").fancybox({
         loop: true,

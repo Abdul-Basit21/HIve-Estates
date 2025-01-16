@@ -2102,7 +2102,34 @@ section.error-404.not-found .hive-btn {
   max-height: 440px;
   width: 100%;
 }
-
+.blog-detail ul.wp-block-list {
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  grid-gap: 5px;
+}
+.blog-detail ul.wp-block-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #1c1c1e;
+  font-family: "Quicksand";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+}
+.blog-detail ul.wp-block-list li::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background-color: #b8860b;
+}
 .post-detail-right .post-details-categories {
   border: 1px solid #807f8550;
   border-radius: 12px;
@@ -2494,6 +2521,14 @@ section.error-404.not-found .hive-btn {
   .aminities-main .aminity {
     min-height: 250px;
     max-height: 250px;
+  }
+  .blog-detail ul.wp-block-list {
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    list-style-type: none;
+    grid-gap: 5px;
   }
   .property_list_grid .property-list-item {
     flex-direction: column;

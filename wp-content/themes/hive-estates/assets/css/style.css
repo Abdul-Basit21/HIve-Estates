@@ -2492,6 +2492,7 @@ section.error-404.not-found .hive-btn {
     padding: 20px 0;
     width: 100%;
     border-bottom: 1px solid #807f8550;
+    cursor: pointer;
   }
   .header-container .main-navigation .main-menu li.menu-item-has-children::after {
     transform: none;
